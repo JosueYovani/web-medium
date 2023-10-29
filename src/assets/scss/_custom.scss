@@ -1,0 +1,27 @@
+:root {
+  background-color: $bg-root;
+}
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: $font-family-base !important;
+  font-weight: 400;
+  font-size: $font-size-base;
+  list-style-type: none;
+}
+
+h3 {
+  font-size: 106px;
+  text-align: center;
+  font-family: "gt-super";
+  font-weight: 400;
+  line-height: 95px;
+}
