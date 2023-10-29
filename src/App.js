@@ -1,5 +1,10 @@
 import React from "react";
+import { PageHome } from "./pages";
 
 export const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <PageHome />
+    </div>
+  );
 };
