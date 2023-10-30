@@ -1,0 +1,35 @@
+.trending {
+  display: flex;
+  height: 350px;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 16px;
+
+  &__wrapper {
+    width: 78%;
+    &--title {
+      display: flex;
+      align-items: center;
+      height: 29px;
+      margin-bottom: 16px;
+
+      img {
+        height: 28px;
+        width: 28px;
+        margin-right: 16px;
+      }
+
+      h2 {
+        font-weight: 400px;
+        font-size: 0.95rem;
+        line-height: 20px;
+      }
+    }
+
+    &--body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.trending-topic {
+  height: 104px;
+  margin-bottom: 24px;
+  padding-right: 0dvb16px;
+  width: 33%;
+
+  &__wrapper {
+    display: flex;
+
+    &--number {
+      color: $ligth;
+      font-weight: 500;
+      letter-spacing: -0.014em;
+      font-size: 2rem;
+      padding: 0 16px 0 0;
+    }
+
+    &--info {
+      .author {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+
+        img {
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+        }
+
+        p {
+          font-size: 13px;
+          font-weight: 500;
+          padding-left: 8px;
+        }
+      }
+
+      .title {
+        padding-bottom: 15px;
+        font-weight: 700;
+        line-height: 20px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .date {
+        color: $gray;
+        font-size: 13px;
+      }
+    }
+  }
+}
