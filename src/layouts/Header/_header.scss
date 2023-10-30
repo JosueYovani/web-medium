@@ -2,13 +2,18 @@ header {
   background-color: $yellow;
   border-bottom: 1px solid $dark;
   display: flex;
-  height: 78px;
+  height: 75px;
+  width: 100%;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 999px;
+
   .top-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 78%;
+    width: 63%;
     &--logo {
       img {
         height: 25px;
