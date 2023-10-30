@@ -1,0 +1,46 @@
+.description {
+  background-color: $yellow;
+  display: flex;
+  height: 470px;
+  justify-content: center;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 78%;
+
+    &-story {
+      h2 {
+        font-size: 7rem;
+        text-align: center;
+        font-family: "gt-super";
+        font-weight: 400;
+        line-height: 95px;
+        letter-spacing: -0.05em;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 48px;
+      }
+
+      button {
+        width: 213px;
+        font-size: 1.15rem;
+        border-radius: 20px;
+        line-height: 24px;
+      }
+    }
+
+    &-cover {
+      img {
+        position: absolute;
+        right: 0px;
+        top: 78px;
+        z-index: 1;
+      }
+    }
+  }
+}
