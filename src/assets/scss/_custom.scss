@@ -25,3 +25,17 @@ h3 {
   font-weight: 400;
   line-height: 95px;
 }
+
+.btn {
+  border: 0;
+  background-color: $dark;
+  border-radius: 15px;
+  color: $ligth;
+  font-weight: 600;
+  padding: 10px 16px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($color: $dark, $amount: 5);
+  }
+}

@@ -1,0 +1,29 @@
+header {
+  background-color: $yellow;
+  border-bottom: 1px solid $dark;
+  display: flex;
+  height: 78px;
+  justify-content: center;
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 78%;
+    &--logo {
+      img {
+        height: 25px;
+        width: auto;
+      }
+    }
+
+    &--nav {
+      span {
+        margin-right: 20px;
+        font-size: 0.85rem;
+        & :hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
