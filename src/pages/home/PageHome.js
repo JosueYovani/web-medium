@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Description } from "../../components/home";
 
 const PageHome = () => {
   return (
-    <div>PageHome</div>
-  )
-}
+    <React.Fragment>
+      <Description />
+    </React.Fragment>
+  );
+};
 
-export default PageHome
+export default PageHome;
