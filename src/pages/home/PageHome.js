@@ -14,10 +14,7 @@ const PageHome = () => {
       <Trending />
       <MainHome>
         <Feeds />
-        <AsideHome>
-          <div>topics</div>
-          <footer>contact</footer>
-        </AsideHome>
+        <AsideHome></AsideHome>
       </MainHome>
     </React.Fragment>
   );
