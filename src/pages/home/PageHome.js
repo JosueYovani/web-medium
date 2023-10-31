@@ -1,11 +1,21 @@
 import React from "react";
-import { Description, Trending } from "../../components/home";
+import {
+  AsideHome,
+  Description,
+  Feeds,
+  MainHome,
+  Trending,
+} from "../../components/home";
 
 const PageHome = () => {
   return (
     <React.Fragment>
       <Description />
       <Trending />
+      <MainHome>
+        <Feeds />
+        <AsideHome></AsideHome>
+      </MainHome>
     </React.Fragment>
   );
 };
