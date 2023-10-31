@@ -1,0 +1,84 @@
+.feed {
+  margin-bottom: 48px;
+  &__wrapper {
+    display: flex;
+
+    justify-content: space-between;
+    &--data {
+      width: 66%;
+      .creator {
+        display: flex;
+        align-items: center;
+        padding-bottom: 8px;
+
+        img {
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+        }
+
+        p {
+          color: $dark;
+          font-size: 0.81rem;
+          font-weight: 600;
+          line-height: 16px;
+          padding-left: 8px;
+        }
+      }
+
+      .story {
+        padding-bottom: 10px;
+        &--title {
+          color: $dark;
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: 0;
+          font-size: 1.3rem;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        &--description {
+          padding-top: 6px;
+          color: $gray;
+        }
+      }
+
+      .summary {
+        display: flex;
+        justify-content: space-between;
+
+        &-info {
+          width: 69%;
+          display: flex;
+          align-items: center;
+          .topic {
+            color: $gray;
+            font-size: 0.8rem;
+            padding: 1px 4px;
+            margin: 0 8px;
+          }
+          .date {
+            color: $gray;
+            font-size: 13px;
+          }
+        }
+
+        &-save {
+          img {
+            height: 25px;
+            width: 25px;
+          }
+        }
+      }
+    }
+
+    &--cover {
+      width: 200px;
+      height: 134px;
+      img {
+        aspect-ratio: auto 200 / 134;
+      }
+    }
+  }
+}
