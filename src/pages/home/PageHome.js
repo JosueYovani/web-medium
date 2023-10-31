@@ -2,6 +2,7 @@ import React from "react";
 import {
   AsideHome,
   Description,
+  DiscoverTopics,
   Feeds,
   MainHome,
   Trending,
@@ -14,7 +15,9 @@ const PageHome = () => {
       <Trending />
       <MainHome>
         <Feeds />
-        <AsideHome></AsideHome>
+        <AsideHome>
+          <DiscoverTopics />
+        </AsideHome>
       </MainHome>
     </React.Fragment>
   );

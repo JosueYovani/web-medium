@@ -1,0 +1,22 @@
+.discover_topics {
+  h2 {
+    color: $dark;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 20px;
+    padding-bottom: 16px;
+  }
+
+  &__wrapper {
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    .topic {
+      padding: 8px 16px;
+      margin: 0 8px 10px 0;
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+}
