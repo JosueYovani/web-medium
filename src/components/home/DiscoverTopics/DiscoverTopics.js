@@ -13,6 +13,7 @@ export const DiscoverTopics = () => {
           </span>
         ))}
       </article>
+      <button>See more topics</button>
     </section>
   );
 };
