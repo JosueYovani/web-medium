@@ -2,10 +2,10 @@ import React from "react";
 
 import { links } from "../../../mocks/data-links";
 
-export const AsideNav = () => {
+export const LinksNav = () => {
   return (
-    <section className="aside-nav">
-      <article className="aside-nav__wrapper">
+    <section className="links-nav">
+      <article className="links-nav__wrapper">
         {links?.map((link, index) => (
           <p key={index}>{link}</p>
         ))}

@@ -1,12 +1,11 @@
 import React from "react";
-
 import imgCover from "../../../assets/images/banner.svg";
 
-export const Description = () => {
+export const StayCurious = () => {
   return (
-    <section className="description">
-      <div className="description__wrapper">
-        <article className="description__wrapper-story">
+    <section className="stay-curious">
+      <div className="stay-curious__wrapper">
+        <article className="stay-curious__wrapper--story">
           <h2>Stay curious.</h2>
           <p>
             Discover stories, thinking, and expertise <br />
@@ -14,8 +13,8 @@ export const Description = () => {
           </p>
           <button className="btn">Start reading</button>
         </article>
-        <article className="description__wrapper-cover">
-          <img src={imgCover} alt="image cover description" />
+        <article className="stay-curious__wrapper--cover">
+          <img src={imgCover} alt="image cover stay-curious" />
         </article>
       </div>
     </section>

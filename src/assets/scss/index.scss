@@ -2,13 +2,16 @@
 @import "./custom";
 
 @import "../../layouts/Header/header";
+@import "../../layouts/BrandLogo/brand-logo";
+@import "../../layouts/TopNav/top-nav";
+@import "../../layouts/Content/content";
+@import "../../layouts/MainHome/main_home";
+@import "../../layouts/AsideHome/aside-home";
 
-@import "../../components/home/Description/description";
-@import "../../components/home/Trending/trending";
-@import "../../components/home/TrendingTopic/trending-topic";
-@import "../../components/home/MainHome/main_home";
-@import "../../components/home/Feeds/feeds";
-@import "../../components/home/Feed/feed";
-@import "../../components/home/AsideHome/aside-home";
+@import "../../components/home/StayCurious/stay-curious";
+@import "../../components/home/TrendingMedium/trending-medium";
+@import "../../components/home/TrendingItem/trending-item";
+@import "../../components/home/FeedsMedium/feeds-medium";
+@import "../../components/home/FeedItem/feed-item";
+@import "../../components/home/LinksNav/links-nav";
 @import "../../components/home/DiscoverTopics/discover_topics";
-@import "../../components/home/AsideNav/aside-nav";
