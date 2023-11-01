@@ -1,0 +1,21 @@
+.aside-nav {
+  border-top: 1px solid $ligth;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: 104px;
+    padding: 24px 0;
+    p {
+      color: $gray;
+      font-size: 0.9rem;
+      font-weight: 400;
+      line-height: 20px;
+      margin: 0 26px 8px 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

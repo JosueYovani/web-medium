@@ -3,6 +3,7 @@
   width: 37%;
 
   &__wrapper {
-    background-color: transparent;
+    position: sticky;
+    top: 107px;
   }
 }
