@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+  justify-content: center;
+  min-height: 470px;
+
+  &__wrapper {
+    width: 63%;
+  }
+}

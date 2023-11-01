@@ -1,4 +1,4 @@
-.description {
+.stay-curious {
   background-color: $yellow;
   border-bottom: 1px solid $dark;
   display: flex;
@@ -11,7 +11,7 @@
     justify-content: space-between;
     width: 63%;
 
-    &-story {
+    &--story {
       h2 {
         font-size: 7rem;
         text-align: center;
@@ -35,7 +35,7 @@
       }
     }
 
-    &-cover {
+    &--cover {
       img {
         position: absolute;
         right: 0px;

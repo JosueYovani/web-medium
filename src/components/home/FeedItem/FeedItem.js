@@ -1,10 +1,9 @@
 import React from "react";
-
 import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
 import iconBook from "../../../assets/images/icons/icon-book.png";
 
-export const Feed = ({ feed }) => {
+export const FeedItem = ({ feed }) => {
   const {
     img_cover,
     title,
@@ -18,9 +17,9 @@ export const Feed = ({ feed }) => {
   } = feed;
 
   return (
-    <div className="feed">
-      <div className="feed__wrapper">
-        <div className="feed__wrapper--data">
+    <div className="feed-item">
+      <div className="feed-item__wrapper">
+        <div className="feed-item__wrapper--data">
           <div className="creator">
             <img
               src={published?.category ? published.img_brand : author.avatar}
@@ -45,7 +44,7 @@ export const Feed = ({ feed }) => {
             </div>
           </div>
         </div>
-        <div className="feed__wrapper--cover">
+        <div className="feed-item__wrapper--cover">
           <img src={img_cover} alt="" />
         </div>
       </div>

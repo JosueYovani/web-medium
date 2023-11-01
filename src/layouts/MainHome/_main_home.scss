@@ -1,13 +1,9 @@
 .main-home {
-  display: flex;
-  min-height: 470px;
-  justify-content: center;
   border-top: 1px solid $ligth;
   padding-top: 96px;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    width: 63%;
   }
 }

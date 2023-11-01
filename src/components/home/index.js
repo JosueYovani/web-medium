@@ -1,7 +1,5 @@
-export { Description } from "./Description/Description";
-export { Trending } from "./Trending/Trending";
-export { MainHome } from "./MainHome/MainHome";
-export { Feeds } from "./Feeds/Feeds";
-export { AsideHome } from "./AsideHome/AsideHome";
+export { StayCurious } from "./StayCurious/StayCurious";
+export { TrendingMedium } from "./TrendingMedium/TrendingMedium";
+export { FeedsMedium } from "./FeedsMedium/FeedsMedium";
 export { DiscoverTopics } from "./DiscoverTopics/DiscoverTopics";
-export { AsideNav } from "./AsideNav/AsideNav";
+export { LinksNav } from "./LinksNav/LinksNav";
