@@ -1,0 +1,9 @@
+.top-nav {
+  span {
+    margin-right: 20px;
+    font-size: 0.85rem;
+    & :hover {
+      cursor: pointer;
+    }
+  }
+}
