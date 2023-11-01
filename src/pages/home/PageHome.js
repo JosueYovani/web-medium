@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AsideHome,
+  AsideNav,
   Description,
   DiscoverTopics,
   Feeds,
@@ -17,6 +18,7 @@ const PageHome = () => {
         <Feeds />
         <AsideHome>
           <DiscoverTopics />
+          <AsideNav />
         </AsideHome>
       </MainHome>
     </React.Fragment>
