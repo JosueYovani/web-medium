@@ -2,6 +2,7 @@ import React from "react";
 import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
 import iconBook from "../../../assets/images/icons/icon-book.png";
+import { Link } from "react-router-dom";
 
 export const FeedItem = ({ feed }) => {
   const {
@@ -30,7 +31,9 @@ export const FeedItem = ({ feed }) => {
             <p>{published?.category && `in ${published.category}`}</p>
           </div>
           <div className="story">
-            <p className="story--title">{title}</p>
+            <Link to="/feed">
+              <p className="story--title">{title}</p>
+            </Link>
             <p className="story--description">{description}</p>
           </div>
           <div className="summary">

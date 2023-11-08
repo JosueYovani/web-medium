@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { PageHome } from "./pages";
+import { PageFeed, PageHome } from "./pages";
 import { HomeLayout } from "./layouts";
 
 export const App = () => {
@@ -11,6 +11,7 @@ export const App = () => {
         <Route path="/" element={<HomeLayout />}>
           <Route index element={<PageHome />} />
         </Route>
+        <Route path="/feed" element={<PageFeed />} />
       </Routes>
     </BrowserRouter>
   );
