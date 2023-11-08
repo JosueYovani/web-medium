@@ -26,7 +26,7 @@ export const FeedItem = ({ feed }) => {
               alt={author.name}
             />
             <p>{author.name}</p>
-            {author.book && <img src={iconBook} alt="icon" />}
+            {author.books.length > 0 && <img src={iconBook} alt="icon" />}
             <p>{published?.category && `in ${published.category}`}</p>
           </div>
           <div className="story">
@@ -35,8 +35,8 @@ export const FeedItem = ({ feed }) => {
           </div>
           <div className="summary">
             <div className="summary-info">
-              <p className="date">{`${date_feed} | ${time_read} min read |`}</p>
-              <span className="topic">{topics[0]}</span>
+              <p className="date">{`${date_feed} | ${time_read} min read`}</p>
+              {topics.length > 0 && <span className="topic">{topics[0]}</span>}
               {member_story && <img src={iconStar} alt="member" />}
             </div>
             <div className="summary-save">

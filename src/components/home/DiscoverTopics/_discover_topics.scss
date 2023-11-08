@@ -9,7 +9,7 @@
   }
 
   &__wrapper {
-    height: 150px;
+    min-height: 150px;
     display: flex;
     flex-wrap: wrap;
     .topic {

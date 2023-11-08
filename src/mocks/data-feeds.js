@@ -1,6 +1,30 @@
 const feeds = [
   {
     img_cover:
+      "https://miro.medium.com/v2/resize:fill:200:134/1*bmcUlaL3lEvm9DOhdvULcQ.jpeg",
+    title: "What I’m Reading on the Rise of Artificial Intelligence",
+    description:
+      "Earlier this week, President Biden issued an executive order on artificial intelligence — a breakthrough technology that has the...",
+    content: "",
+    date_feed: "Nov 3",
+    author: {
+      name: "Barack Obama",
+      avatar:
+        "https://miro.medium.com/v2/resize:fill:40:40/1*AwBz4NW9_M45J-sBlmH-lA.png",
+      books: ["1"],
+    },
+    published: {
+      category: "",
+      img_brand: "",
+    },
+    topics: [],
+    claps: "",
+    time_read: 2,
+    member_story: false,
+    comments: [],
+  },
+  {
+    img_cover:
       "https://miro.medium.com/v2/resize:fill:200:134/1*lgWp1uYIo4i4Y62dBBhGvA.png",
     title: "How I scaled Amazon’s Load Generator to run on 1000s of machines",
     description: "Moving from a single-host process to a distributed system",
@@ -10,6 +34,7 @@ const feeds = [
       name: "Carlos Arguelles",
       avatar:
         "https://miro.medium.com/v2/resize:fill:40:40/1*DUjBSZ8vCnqtthWwHubL9A.png",
+      books: [],
     },
     published: {
       category: "",
@@ -32,7 +57,7 @@ const feeds = [
       name: "Meredith Rodriguez",
       avatar:
         "https://miro.medium.com/v2/resize:fill:40:40/0*fHBQqjAMfAyJamtM.jpg",
-      book: false,
+      books: [],
     },
     published: {
       category: "The Riff",
@@ -58,7 +83,7 @@ const feeds = [
       name: "Richard Gingras",
       avatar:
         "https://miro.medium.com/v2/resize:fill:40:40/0*RMm9-Ve-PGeAt4rT.jpg",
-      book: false,
+      books: [],
     },
     published: {
       category: "",
@@ -80,7 +105,7 @@ const feeds = [
       name: "Adeline Dimond",
       avatar:
         "https://miro.medium.com/v2/resize:fill:40:40/1*c7aVx5yznXS4_CMNvjGZiA@2x.jpeg",
-      book: false,
+      books: [],
     },
     published: {
       category: "Sybarite",
@@ -105,7 +130,7 @@ const feeds = [
       name: "Scott H. Young",
       avatar:
         "https://miro.medium.com/v2/resize:fill:40:40/2*88Qdf_PKsdTYMipqHcYWtA.jpeg",
-      book: true,
+      books: ["1"],
     },
     published: {
       category: "Mind Cafe",

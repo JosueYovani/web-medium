@@ -1,10 +1,17 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import { PageHome } from "./pages";
+import { HomeLayout } from "./layouts";
 
 export const App = () => {
   return (
-    <React.Fragment>
-      <PageHome />
-    </React.Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeLayout />}>
+          <Route index element={<PageHome />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
