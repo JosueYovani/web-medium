@@ -4,7 +4,8 @@
   "description": "Project is inspired by Medium",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot"
+    "dev": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack"
   },
   "author": "yovanisac",
   "license": "ISC",

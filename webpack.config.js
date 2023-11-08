@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: __dirname + "/public",
     publicPath: "/",
   },
   plugins: [
@@ -14,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/i,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -29,6 +28,10 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
       },
     ],
