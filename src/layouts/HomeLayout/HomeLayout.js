@@ -1,4 +1,6 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
+
 import {
   AsideHome,
   BrandLogo,
@@ -16,7 +18,7 @@ import {
   TrendingMedium,
 } from "../../components/home";
 
-const HomeLayout = ({ children }) => {
+const HomeLayout = () => {
   return (
     <div className="home-layout">
       <Layout>
@@ -30,7 +32,7 @@ const HomeLayout = ({ children }) => {
         <Content>
           <TrendingMedium />
           <MainHome>
-            {children}
+            <Outlet />
             <AsideHome>
               <DiscoverTopics />
               <LinksNav />
