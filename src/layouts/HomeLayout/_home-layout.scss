@@ -1,0 +1,48 @@
+.home-layout {
+  .layout {
+    .header {
+      border-bottom: 1px solid $dark;
+      display: flex;
+      height: 75px;
+      width: 100%;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      z-index: 999px;
+
+      &.bg-primary {
+        background-color: $bg-primary;
+      }
+      &.bg-secondary {
+        background-color: $bg-secondary;
+      }
+
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 63%;
+      }
+    }
+
+    .main {
+      display: flex;
+      justify-content: center;
+      min-height: 470px;
+
+      &__wrapper {
+        width: 100%;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      min-height: 470px;
+
+      &__wrapper {
+        width: 63%;
+      }
+    }
+  }
+}

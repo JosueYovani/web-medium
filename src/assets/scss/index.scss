@@ -1,12 +1,11 @@
 @import "./variables";
 @import "./custom";
 
-@import "../../layouts/Header/header";
-@import "../../layouts/BrandLogo/brand-logo";
-@import "../../layouts/TopNav/top-nav";
-@import "../../layouts/Content/content";
-@import "../../layouts/MainHome/main_home";
-@import "../../layouts/AsideHome/aside-home";
+@import "../../layouts/HomeLayout/home-layout";
+@import "../../components/layouts/AsideHome/aside-home";
+@import "../../components/layouts/BrandLogo/brand-logo";
+@import "../../components/layouts/MainHome/main_home";
+@import "../../components/layouts/TopNav/top-nav";
 
 @import "../../components/home/StayCurious/stay-curious";
 @import "../../components/home/TrendingMedium/trending-medium";

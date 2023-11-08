@@ -3,8 +3,8 @@ import imgCover from "../../../assets/images/banner.svg";
 
 export const StayCurious = () => {
   return (
-    <section className="stay-curious">
-      <div className="stay-curious__wrapper">
+    <article className="stay-curious">
+      <section className="stay-curious__wrapper">
         <article className="stay-curious__wrapper--story">
           <h2>Stay curious.</h2>
           <p>
@@ -16,7 +16,7 @@ export const StayCurious = () => {
         <article className="stay-curious__wrapper--cover">
           <img src={imgCover} alt="image cover stay-curious" />
         </article>
-      </div>
-    </section>
+      </section>
+    </article>
   );
 };
