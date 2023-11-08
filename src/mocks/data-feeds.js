@@ -1,6 +1,30 @@
 const feeds = [
   {
     img_cover:
+      "https://miro.medium.com/v2/resize:fill:200:134/0*GLCTpKGyLmPpudPy.png",
+    title: "The Netflix Effect",
+    description:
+      "Despite receiving scant coverage, the biggest business stories last week were Netflix and Meta’s quarterly earnings. The numbers",
+    content: "",
+    date_feed: "Nov 2",
+    author: {
+      name: "Scott Galloway",
+      avatar:
+        "https://miro.medium.com/v2/resize:fill:40:40/1*UmXe4ATjCtj3OENRaZnIpw.jpeg",
+      books: ["1"],
+    },
+    published: {
+      category: "",
+      img_brand: "",
+    },
+    topics: ["No Mercy No Malice"],
+    claps: "",
+    time_read: 9,
+    member_story: false,
+    comments: [],
+  },
+  {
+    img_cover:
       "https://miro.medium.com/v2/resize:fill:200:134/1*bmcUlaL3lEvm9DOhdvULcQ.jpeg",
     title: "What I’m Reading on the Rise of Artificial Intelligence",
     description:
@@ -141,6 +165,30 @@ const feeds = [
     topics: ["Self"],
     time_read: 5,
     member_story: true,
+    comments: [],
+  },
+  {
+    img_cover:
+      "https://miro.medium.com/v2/resize:fit:700/1*vXJTInWAy3Gu1kOJNm-c-Q.png",
+    title: "React render multiple layouts with react-router-dom v6",
+    description:
+      "Step-by-step guide to render multiple layouts in React using the new react-router-dom version 6.",
+    content: "",
+    date_feed: "Jan 31",
+    author: {
+      name: "Najm Eddine Zaga",
+      avatar:
+        "https://miro.medium.com/v2/resize:fill:40:40/1*d8qtMz8dfIvQD8GHlAiCRA.png",
+      books: [],
+    },
+    published: {
+      category: "",
+      img_brand: "",
+    },
+    topics: [],
+    claps: "",
+    time_read: 9,
+    member_story: false,
     comments: [],
   },
 ];
