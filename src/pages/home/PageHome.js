@@ -1,13 +1,8 @@
 import React from "react";
-import { HomeLayout } from "../../layouts";
 import { FeedsMedium } from "../../components/home";
 
 const PageHome = () => {
-  return (
-    <HomeLayout>
-      <FeedsMedium />
-    </HomeLayout>
-  );
+  return <FeedsMedium />;
 };
 
 export default PageHome;
