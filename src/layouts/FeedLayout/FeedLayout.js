@@ -1,14 +1,26 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-import { BrandLogo, Content, Header, Layout } from "../../components/layouts";
+import {
+  AuthNav,
+  BrandLogo,
+  Content,
+  Header,
+  Layout,
+  TopSearch,
+} from "../../components/layouts";
 
 const FeedLayout = () => {
   return (
     <div className="feed-layout">
       <Layout>
         <Header>
-          <BrandLogo />
+          <section className="section-left">
+            <BrandLogo />
+            <TopSearch />
+          </section>
+
+          <AuthNav />
         </Header>
         <Content>
           <Outlet />

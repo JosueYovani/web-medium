@@ -1,0 +1,26 @@
+.top-search {
+  background-color: $bg-gray;
+  display: flex;
+  align-items: center;
+  width: 240px;
+  border-radius: 20px;
+  margin-left: 16px;
+
+  &--icon {
+    margin: 0 12px;
+
+    img {
+      height: 24px;
+    }
+  }
+
+  &--input {
+    input {
+      border: 0;
+      background-color: transparent;
+      padding: 12px 25px 12px 0;
+      font-weight: 400;
+      font-size: 0.83rem;
+    }
+  }
+}

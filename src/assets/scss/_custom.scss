@@ -32,6 +32,16 @@ body {
   }
 }
 
+.btn-secondary {
+  background-color: $green;
+  border-radius: 21px;
+  color: $ligth !important;
+  padding: 0 15px !important;
+  &:hover {
+    background-color: darken($color: $green, $amount: 5) !important;
+  }
+}
+
 .topic {
   background-color: $bg-ligth;
   border: 1px solid $ligth;
