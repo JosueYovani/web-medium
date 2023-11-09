@@ -1,0 +1,41 @@
+.feed {
+  background-color: aquamarine;
+  &__wrapper {
+    background-color: bisque;
+
+    &--head {
+      background-color: aqua;
+      &-title {
+        margin-top: 1.19em;
+        margin-bottom: 32px;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 52px;
+      }
+      &-creator {
+        display: flex;
+        align-items: center;
+        padding-bottom: 8px;
+
+        img {
+          height: 44px;
+          width: 44px;
+          border-radius: 50%;
+        }
+
+        p {
+          color: $dark;
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 16px;
+          padding-left: 8px;
+        }
+
+        .icon {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}

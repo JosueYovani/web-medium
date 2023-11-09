@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 export const FeedItem = ({ feed }) => {
   const {
+    id,
     img_cover,
     title,
     description,
@@ -31,7 +32,7 @@ export const FeedItem = ({ feed }) => {
             <p>{published?.category && `in ${published.category}`}</p>
           </div>
           <div className="story">
-            <Link to="/feed">
+            <Link to={`/feed/${id}`}>
               <p className="story--title">{title}</p>
             </Link>
             <p className="story--description">{description}</p>

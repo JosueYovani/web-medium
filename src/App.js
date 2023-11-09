@@ -11,7 +11,7 @@ export const App = () => {
         <Route path="/" element={<HomeLayout />}>
           <Route index element={<PageHome />} />
         </Route>
-        <Route path="/feed" element={<PageFeed />} />
+        <Route path="/feed/:id" element={<PageFeed />} />
       </Routes>
     </BrowserRouter>
   );

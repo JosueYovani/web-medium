@@ -1,5 +1,6 @@
 const feeds = [
   {
+    id: "001",
     img_cover:
       "https://miro.medium.com/v2/resize:fill:200:134/0*GLCTpKGyLmPpudPy.png",
     title: "The Netflix Effect",
@@ -24,6 +25,7 @@ const feeds = [
     comments: [],
   },
   {
+    id: "008",
     img_cover:
       "https://miro.medium.com/v2/resize:fill:200:134/1*bmcUlaL3lEvm9DOhdvULcQ.jpeg",
     title: "What I’m Reading on the Rise of Artificial Intelligence",
@@ -48,6 +50,7 @@ const feeds = [
     comments: [],
   },
   {
+    id: "007",
     img_cover:
       "https://miro.medium.com/v2/resize:fill:200:134/1*lgWp1uYIo4i4Y62dBBhGvA.png",
     title: "How I scaled Amazon’s Load Generator to run on 1000s of machines",
@@ -71,6 +74,7 @@ const feeds = [
     comments: [],
   },
   {
+    id: "006",
     img_cover:
       "https://miro.medium.com/v2/resize:fill:200:134/0*5hJgvT1vt6PZRMd3",
     title: "Earworms and Anhedonia",
@@ -96,6 +100,7 @@ const feeds = [
     comments: [],
   },
   {
+    id: "005",
     img_cover:
       "https://miro.medium.com/v2/resize:fill:200:134/1*IraA41cyapCYG2vMH2Tvxw.png",
     title: "How might we build trust in an untrusting world?",
@@ -119,6 +124,7 @@ const feeds = [
     comments: [],
   },
   {
+    id: "004",
     img_cover:
       "https://miro.medium.com/v2/resize:fill:200:134/1*2RRtiHusrykTmfM7FcUffw.jpeg",
     title: "What We Think About When We Think About Red Lobster",
@@ -143,6 +149,7 @@ const feeds = [
     comments: [],
   },
   {
+    id: "003",
     img_cover:
       "https://miro.medium.com/v2/resize:fill:200:134/0*dZJ-oQFBgymsAleq",
     title: "18 Life Lessons I’d Give My 18-Year-Old Self",
@@ -168,6 +175,7 @@ const feeds = [
     comments: [],
   },
   {
+    id: "002",
     img_cover:
       "https://miro.medium.com/v2/resize:fit:700/1*vXJTInWAy3Gu1kOJNm-c-Q.png",
     title: "React render multiple layouts with react-router-dom v6",

@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import { Feed } from "../../components/feed";
 
 const PageFeed = () => {
-  return (
-    <div>PageFeed</div>
-  )
-}
+  return <Feed />;
+};
 
-export default PageFeed
+export default PageFeed;
