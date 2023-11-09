@@ -1,3 +1,52 @@
 .form-new-feed {
-  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+
+  form {
+    .form-group {
+      margin-bottom: 5px;
+
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 8px;
+        border: 0;
+        border-bottom: 1px solid rgb(242, 242, 242);
+        border-radius: 4px;
+        box-sizing: border-box;
+        color: $txt-form;
+        font-size: 1.5rem;
+        font-family: Georgia, Times, serif;
+        &::placeholder {
+          color: $txt-form;
+        }
+      }
+
+      .title {
+        font-size: 2.1rem;
+      }
+
+      span {
+        color: red;
+        font-size: 12px;
+        display: block;
+        margin-top: 5px;
+      }
+    }
+
+    button {
+      background-color: $green;
+      color: $ligth;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 15px;
+      font-size: 0.79rem;
+      width: 100%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }
