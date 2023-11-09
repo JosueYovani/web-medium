@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { PageFeed, PageHome } from "./pages";
-import { HomeLayout } from "./layouts";
+import { FeedLayout, HomeLayout } from "./layouts";
 
 export const App = () => {
   return (
@@ -11,7 +11,9 @@ export const App = () => {
         <Route path="/" element={<HomeLayout />}>
           <Route index element={<PageHome />} />
         </Route>
-        <Route path="/feed/:id" element={<PageFeed />} />
+        <Route path="/feed" element={<FeedLayout />}>
+          <Route path=":id" element={<PageFeed />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
