@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { PageFeed, PageHome } from "./pages";
+import { PageFeed, PageHome, PageNewHistory } from "./pages";
 import { FeedLayout, HomeLayout } from "./layouts";
 
 export const App = () => {
@@ -14,6 +14,7 @@ export const App = () => {
         <Route path="/feed" element={<FeedLayout />}>
           <Route path=":id" element={<PageFeed />} />
         </Route>
+        <Route path="/new-history" element={<PageNewHistory />} />
       </Routes>
     </BrowserRouter>
   );
