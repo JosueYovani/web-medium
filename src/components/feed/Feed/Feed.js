@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from "react";
+
+import { useParams } from "react-router-dom";
+import feeds from "../../../mocks/data-feeds";
+
 import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
 import iconBook from "../../../assets/images/icons/icon-book.png";
-import feeds from "../../../mocks/data-feeds";
-import { useParams } from "react-router-dom";
+import iconListen from "../../../assets/images/icons/icon-listen.png";
+import iconShare from "../../../assets/images/icons/icon-share.png";
+import iconClap from "../../../assets/images/icons/icon-clap.png";
+import iconComment from "../../../assets/images/icons/icon-comment.png";
 
 export const Feed = () => {
   const { id } = useParams();
   const [feed, setFeed] = useState([]);
 
   useEffect(() => {
-    const foundFeed = feeds.find((item) => item.id === id);
+    const foundFeed = feeds.find((feed) => feed.id === id);
     if (foundFeed) {
       setFeed(foundFeed);
     } else {
@@ -20,8 +26,8 @@ export const Feed = () => {
 
   return (
     <section className="feed">
-      <div className="feed__wrapper">
-        <div className="feed__wrapper--head">
+      <article className="feed__wrapper">
+        <section className="feed__wrapper--head">
           {feed.member_story && (
             <div className="member-only">
               <img src={iconStar} alt="member" /> <span>Member-only story</span>
@@ -29,7 +35,7 @@ export const Feed = () => {
           )}
           <h1 className="feed__wrapper--head-title">{feed.title}</h1>
           {feed.member_story && <p>{feed.description}</p>}
-          <div className="feed__wrapper--head-creator">
+          <article className="feed__wrapper--head-creator">
             <div className="avatar">
               <img src={feed.author?.avatar} alt={feed.author?.name} />
               {feed.published?.category && (
@@ -68,9 +74,36 @@ export const Feed = () => {
                 )}
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </article>
+          <article className="feed__wrapper--head-actions">
+            <div className="publish">
+              <div className="publish--group space">
+                <button>
+                  <img src={iconClap} alt="icon clap" />
+                </button>
+                <span>{feed.claps}K</span>
+              </div>
+              <div className="publish--group">
+                <button>
+                  <img src={iconComment} alt="icon clap" />
+                </button>
+                <span>{feed.comments?.length}</span>
+              </div>
+            </div>
+            <div className="share">
+              <button className="space">
+                <img src={iconSave} alt="icon save" />
+              </button>
+              <button className="space">
+                <img src={iconListen} alt="icon listen" />
+              </button>
+              <button>
+                <img src={iconShare} alt="icon share" />
+              </button>
+            </div>
+          </article>
+        </section>
+      </article>
     </section>
   );
 };
