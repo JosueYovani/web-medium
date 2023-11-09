@@ -1,6 +1,8 @@
 @import "./variables";
 @import "./custom";
 
+@import "../../layouts/FeedLayout/feed-layout";
+
 @import "../../layouts/HomeLayout/home-layout";
 @import "../../components/layouts/AsideHome/aside-home";
 @import "../../components/layouts/BrandLogo/brand-logo";

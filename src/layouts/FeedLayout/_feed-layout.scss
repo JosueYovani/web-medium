@@ -1,0 +1,33 @@
+.feed-layout {
+  .layout {
+    .header {
+      border-bottom: 1px solid rgb(242, 242, 242);
+      display: flex;
+      height: 57px;
+      justify-content: center;
+
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 97%;
+
+        .brand-logo {
+          img {
+            height: 22px;
+          }
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      min-height: 470px;
+
+      &__wrapper {
+        width: 760px;
+      }
+    }
+  }
+}
