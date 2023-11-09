@@ -2,11 +2,11 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 
 import {
+  AuthNav,
   BrandLogo,
   Content,
   Header,
   Layout,
-  TopNav,
   TopSearch,
 } from "../../components/layouts";
 
@@ -20,7 +20,7 @@ const FeedLayout = () => {
             <TopSearch />
           </section>
 
-          <TopNav />
+          <AuthNav />
         </Header>
         <Content>
           <Outlet />

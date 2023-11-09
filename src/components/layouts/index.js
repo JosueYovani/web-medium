@@ -1,4 +1,5 @@
 export { AsideHome } from "./AsideHome/AsideHome";
+export { AuthNav } from "./AuthNav/AuthNav";
 export { BrandLogo } from "./BrandLogo/BrandLogo";
 export { MainHome } from "./MainHome/MainHome";
 export { TopNav } from "./TopNav/TopNav";

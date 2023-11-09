@@ -3,14 +3,15 @@
 
 @import "../../layouts/FeedLayout/feed-layout";
 @import "../../components/layouts/TopSearch/top-search";
+@import "../../components/layouts/AuthNav/auth-nav";
+
+@import "../../components/feed/Feed/feed";
 
 @import "../../layouts/HomeLayout/home-layout";
 @import "../../components/layouts/AsideHome/aside-home";
 @import "../../components/layouts/BrandLogo/brand-logo";
 @import "../../components/layouts/MainHome/main_home";
 @import "../../components/layouts/TopNav/top-nav";
-
-@import "../../components/feed/Feed/feed";
 
 @import "../../components/home/StayCurious/stay-curious";
 @import "../../components/home/TrendingMedium/trending-medium";
