@@ -2,7 +2,7 @@ const feeds = [
   {
     id: "001",
     img_cover:
-      "https://miro.medium.com/v2/resize:fill:200:134/0*GLCTpKGyLmPpudPy.png",
+      "https://miro.medium.com/v2/resize:fit:700/0*GLCTpKGyLmPpudPy.png",
     title: "The Netflix Effect",
     description:
       "Despite receiving scant coverage, the biggest business stories last week were Netflix and Meta’s quarterly earnings. The numbers",
@@ -11,7 +11,7 @@ const feeds = [
     author: {
       name: "Scott Galloway",
       avatar:
-        "https://miro.medium.com/v2/resize:fill:40:40/1*UmXe4ATjCtj3OENRaZnIpw.jpeg",
+        "https://miro.medium.com/v2/resize:fit:700/1*UmXe4ATjCtj3OENRaZnIpw.jpeg",
       books: ["1"],
     },
     published: {
@@ -27,7 +27,7 @@ const feeds = [
   {
     id: "008",
     img_cover:
-      "https://miro.medium.com/v2/resize:fill:200:134/1*bmcUlaL3lEvm9DOhdvULcQ.jpeg",
+      "https://miro.medium.com/v2/resize:fit:700/1*bmcUlaL3lEvm9DOhdvULcQ.jpeg",
     title: "What I’m Reading on the Rise of Artificial Intelligence",
     description:
       "Earlier this week, President Biden issued an executive order on artificial intelligence — a breakthrough technology that has the...",
@@ -36,7 +36,7 @@ const feeds = [
     author: {
       name: "Barack Obama",
       avatar:
-        "https://miro.medium.com/v2/resize:fill:40:40/1*AwBz4NW9_M45J-sBlmH-lA.png",
+        "https://miro.medium.com/v2/resize:fit:700/1*AwBz4NW9_M45J-sBlmH-lA.png",
       books: ["1"],
     },
     published: {
@@ -52,7 +52,7 @@ const feeds = [
   {
     id: "007",
     img_cover:
-      "https://miro.medium.com/v2/resize:fill:200:134/1*lgWp1uYIo4i4Y62dBBhGvA.png",
+      "https://miro.medium.com/v2/resize:fit:700/1*lgWp1uYIo4i4Y62dBBhGvA.png",
     title: "How I scaled Amazon’s Load Generator to run on 1000s of machines",
     description: "Moving from a single-host process to a distributed system",
     content: "",
@@ -60,7 +60,7 @@ const feeds = [
     author: {
       name: "Carlos Arguelles",
       avatar:
-        "https://miro.medium.com/v2/resize:fill:40:40/1*DUjBSZ8vCnqtthWwHubL9A.png",
+        "https://miro.medium.com/v2/resize:fit:700/1*DUjBSZ8vCnqtthWwHubL9A.png",
       books: [],
     },
     published: {
@@ -75,8 +75,7 @@ const feeds = [
   },
   {
     id: "006",
-    img_cover:
-      "https://miro.medium.com/v2/resize:fill:200:134/0*5hJgvT1vt6PZRMd3",
+    img_cover: "https://miro.medium.com/v2/resize:fit:700/0*5hJgvT1vt6PZRMd3",
     title: "Earworms and Anhedonia",
     description: "Musings on a musical haunting",
     content: "",
@@ -84,13 +83,13 @@ const feeds = [
     author: {
       name: "Meredith Rodriguez",
       avatar:
-        "https://miro.medium.com/v2/resize:fill:40:40/0*fHBQqjAMfAyJamtM.jpg",
+        "https://miro.medium.com/v2/resize:fit:700/0*fHBQqjAMfAyJamtM.jpg",
       books: [],
     },
     published: {
       category: "The Riff",
       img_brand:
-        "https://miro.medium.com/v2/resize:fill:40:40/1*dG_T_tBLzdhZU-45_5r_NQ.png",
+        "https://miro.medium.com/v2/resize:fit:700/1*dG_T_tBLzdhZU-45_5r_NQ.png",
     },
 
     topics: ["Music"],
@@ -102,7 +101,7 @@ const feeds = [
   {
     id: "005",
     img_cover:
-      "https://miro.medium.com/v2/resize:fill:200:134/1*IraA41cyapCYG2vMH2Tvxw.png",
+      "https://miro.medium.com/v2/resize:fit:700/1*IraA41cyapCYG2vMH2Tvxw.png",
     title: "How might we build trust in an untrusting world?",
     description:
       "Considering the challenge of polarization in digital societies",
@@ -111,7 +110,7 @@ const feeds = [
     author: {
       name: "Richard Gingras",
       avatar:
-        "https://miro.medium.com/v2/resize:fill:40:40/0*RMm9-Ve-PGeAt4rT.jpg",
+        "https://miro.medium.com/v2/resize:fit:700/0*RMm9-Ve-PGeAt4rT.jpg",
       books: [],
     },
     published: {
@@ -127,7 +126,7 @@ const feeds = [
   {
     id: "004",
     img_cover:
-      "https://miro.medium.com/v2/resize:fill:200:134/1*2RRtiHusrykTmfM7FcUffw.jpeg",
+      "https://miro.medium.com/v2/resize:fit:700/1*2RRtiHusrykTmfM7FcUffw.jpeg",
     title: "What We Think About When We Think About Red Lobster",
     description: "The comfort of chain restaurants",
     content: "",
@@ -135,13 +134,13 @@ const feeds = [
     author: {
       name: "Adeline Dimond",
       avatar:
-        "https://miro.medium.com/v2/resize:fill:40:40/1*c7aVx5yznXS4_CMNvjGZiA@2x.jpeg",
+        "https://miro.medium.com/v2/resize:fit:700/1*c7aVx5yznXS4_CMNvjGZiA@2x.jpeg",
       books: [],
     },
     published: {
       category: "Sybarite",
       img_brand:
-        "https://miro.medium.com/v2/resize:fill:40:40/1*ROtLAgltIdICq2DTRUMKqg.jpeg",
+        "https://miro.medium.com/v2/resize:fit:700/1*ROtLAgltIdICq2DTRUMKqg.jpeg",
     },
 
     topics: ["Read Lobster"],
@@ -152,8 +151,7 @@ const feeds = [
   },
   {
     id: "003",
-    img_cover:
-      "https://miro.medium.com/v2/resize:fill:200:134/0*dZJ-oQFBgymsAleq",
+    img_cover: "https://miro.medium.com/v2/resize:fit:700/0*dZJ-oQFBgymsAleq",
     title: "18 Life Lessons I’d Give My 18-Year-Old Self",
     description:
       "Dating success, making friends, money and dealing with assholes…",
@@ -162,7 +160,7 @@ const feeds = [
     author: {
       name: "Scott H. Young",
       avatar:
-        "https://miro.medium.com/v2/resize:fill:40:40/2*88Qdf_PKsdTYMipqHcYWtA.jpeg",
+        "https://miro.medium.com/v2/resize:fit:700/2*88Qdf_PKsdTYMipqHcYWtA.jpeg",
       books: ["1"],
     },
     published: {
@@ -189,7 +187,7 @@ const feeds = [
     author: {
       name: "Najm Eddine Zaga",
       avatar:
-        "https://miro.medium.com/v2/resize:fill:40:40/1*d8qtMz8dfIvQD8GHlAiCRA.png",
+        "https://miro.medium.com/v2/resize:fit:700/1*d8qtMz8dfIvQD8GHlAiCRA.png",
       books: [],
     },
     published: {

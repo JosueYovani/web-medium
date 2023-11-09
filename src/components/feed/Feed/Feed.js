@@ -103,6 +103,14 @@ export const Feed = () => {
             </div>
           </article>
         </section>
+        <section className="feed__wrapper--body">
+          <article className="feed__wrapper--body--cover">
+            <img src={feed.img_cover} alt={feed.title} />
+          </article>
+          <article className="feed__wrapper--body--content">
+            <p>{feed.content}</p>
+          </article>
+        </section>
       </article>
     </section>
   );
