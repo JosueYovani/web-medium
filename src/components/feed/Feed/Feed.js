@@ -22,24 +22,52 @@ export const Feed = () => {
     <section className="feed">
       <div className="feed__wrapper">
         <div className="feed__wrapper--head">
+          {feed.member_story && (
+            <div className="member-only">
+              <img src={iconStar} alt="member" /> <span>Member-only story</span>
+            </div>
+          )}
           <h1 className="feed__wrapper--head-title">{feed.title}</h1>
+          {feed.member_story && <p>{feed.description}</p>}
           <div className="feed__wrapper--head-creator">
             <div className="avatar">
-              {feed.published?.category ? (
-                <img
-                  src={feed.published.img_brand}
-                  alt={feed.published.category}
-                />
-              ) : (
-                <img src={feed.author?.avatar} alt={feed.author?.name} />
+              <img src={feed.author?.avatar} alt={feed.author?.name} />
+              {feed.published?.category && (
+                <div className="category">
+                  <img
+                    src={feed.published.img_brand}
+                    alt={feed.published.category}
+                  />
+                </div>
               )}
             </div>
-            <p>{feed.author?.name}</p>
-            {feed.author?.books.length > 0 && (
-              <img className="icon" src={iconBook} alt="icon" />
-            )}
-            <p>{feed.published?.category && `in ${feed.published.category}`}</p>
-            <p>{feed.time_read} min read</p>
+            <div className="publication">
+              <div className="publication--author">
+                <span>{feed.author?.name}</span>
+                <div className="icon">
+                  {feed.author?.books.length > 0 && (
+                    <img src={iconBook} alt="icon" />
+                  )}
+                </div>
+                <span className="separation">.</span>
+                <button>Follow</button>
+              </div>
+              <div className="publication--info">
+                {feed.published?.category && (
+                  <span>{`Published in ${feed.published.category}`} </span>
+                )}
+                {feed.published?.category && (
+                  <span className="separation">.</span>
+                )}
+                <span>{feed.time_read} min read</span>
+                <span className="separation">.</span>
+                {feed.published?.category ? (
+                  <span>{feed.date_feed}</span>
+                ) : (
+                  <span>5 days ago</span>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
