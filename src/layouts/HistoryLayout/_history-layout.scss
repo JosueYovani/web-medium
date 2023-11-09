@@ -1,0 +1,38 @@
+.history-layout {
+  .layout {
+    .header {
+      display: flex;
+      height: 57px;
+      justify-content: center;
+
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 97%;
+
+        .brand-logo {
+          img {
+            height: 22px;
+          }
+        }
+
+        .section-left {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      min-height: 470px;
+      margin-top: 50px;
+
+      &__wrapper {
+        width: 760px;
+      }
+    }
+  }
+}
