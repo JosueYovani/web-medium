@@ -7,7 +7,7 @@ import { NotResults } from "../../common";
 // import feeds from "../../../mocks/data-feeds";
 
 export const FeedsMedium = () => {
-  const [feeds, setFeeds] = useState([]);
+  const [feeds, setFeeds] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,11 +22,9 @@ export const FeedsMedium = () => {
     fetchData();
   }, []);
 
-  console.log(feeds);
-
   return (
     <section className="feeds-medium">
-      {feeds?.length > 0 ? <FeedsMediumList feeds={feeds} /> : <NotResults />}
+      {feeds ? <FeedsMediumList feeds={feeds} /> : <NotResults />}
     </section>
   );
 };

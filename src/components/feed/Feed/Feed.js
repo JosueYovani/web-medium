@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from "react";
-
-import { useParams } from "react-router-dom";
-import feeds from "../../../mocks/data-feeds";
+import React from "react";
 
 import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
@@ -10,48 +7,50 @@ import iconListen from "../../../assets/images/icons/icon-listen.png";
 import iconShare from "../../../assets/images/icons/icon-share.png";
 import iconClap from "../../../assets/images/icons/icon-clap.png";
 import iconComment from "../../../assets/images/icons/icon-comment.png";
+import { parseDateDAgo } from "../../../helpers/paredDate";
 
-export const Feed = () => {
-  const { id } = useParams();
-  const [feed, setFeed] = useState([]);
+export const Feed = ({ feed }) => {
+  const {
+    member_story,
+    title,
+    published,
+    description,
+    author,
+    time_read,
+    date_feed,
+    claps,
+    comments,
+    img_cover,
+    content,
+  } = feed;
 
-  useEffect(() => {
-    const foundFeed = feeds.find((feed) => feed.id === id);
-    if (foundFeed) {
-      setFeed(foundFeed);
-    } else {
-      console.log(`Feed with id ${id} not found.`);
-    }
-  }, [id, feeds]);
+  console.log(feed);
 
   return (
     <section className="feed">
       <article className="feed__wrapper">
         <section className="feed__wrapper--head">
-          {feed.member_story && (
+          {member_story && (
             <div className="member-only">
               <img src={iconStar} alt="member" /> <span>Member-only story</span>
             </div>
           )}
-          <h1 className="feed__wrapper--head-title">{feed.title}</h1>
-          {feed.member_story && <p>{feed.description}</p>}
+          <h1 className="feed__wrapper--head-title">{title}</h1>
+          {member_story && <p>{description}</p>}
           <article className="feed__wrapper--head-creator">
             <div className="avatar">
-              <img src={feed.author?.avatar} alt={feed.author?.name} />
-              {feed.published?.category && (
+              {author.avatar && <img src={author?.avatar} alt={author?.name} />}
+              {published?.category && (
                 <div className="category">
-                  <img
-                    src={feed.published.img_brand}
-                    alt={feed.published.category}
-                  />
+                  <img src={published.img_brand} alt={published.category} />
                 </div>
               )}
             </div>
             <div className="publication">
               <div className="publication--author">
-                <span>{feed.author?.name}</span>
+                <span>{author?.name}</span>
                 <div className="icon">
-                  {feed.author?.books.length > 0 && (
+                  {author?.books?.length > 0 && (
                     <img src={iconBook} alt="icon" />
                   )}
                 </div>
@@ -59,18 +58,18 @@ export const Feed = () => {
                 <button>Follow</button>
               </div>
               <div className="publication--info">
-                {feed.published?.category && (
-                  <span>{`Published in ${feed.published.category}`} </span>
+                {published?.category && (
+                  <span>{`Published in ${published.category}`} </span>
                 )}
                 {feed.published?.category && (
                   <span className="separation">.</span>
                 )}
-                <span>{feed.time_read} min read</span>
+                <span>{time_read ? time_read : 8} min read</span>
                 <span className="separation">.</span>
-                {feed.published?.category ? (
-                  <span>{feed.date_feed}</span>
+                {published?.category ? (
+                  <span>{date_feed}</span>
                 ) : (
-                  <span>5 days ago</span>
+                  <span>{parseDateDAgo(date_feed)}</span>
                 )}
               </div>
             </div>
@@ -81,13 +80,14 @@ export const Feed = () => {
                 <button>
                   <img src={iconClap} alt="icon clap" />
                 </button>
-                <span>{feed.claps}K</span>
+                <span>{claps ? claps : 2.4}K</span>
               </div>
+
               <div className="publish--group">
                 <button>
                   <img src={iconComment} alt="icon clap" />
                 </button>
-                <span>{feed.comments?.length}</span>
+                <span>{comments ? comments : 99}</span>
               </div>
             </div>
             <div className="share">
@@ -105,10 +105,10 @@ export const Feed = () => {
         </section>
         <section className="feed__wrapper--body">
           <article className="feed__wrapper--body--cover">
-            <img src={feed.img_cover} alt={feed.title} />
+            {img_cover && <img src={img_cover} alt={title} />}
           </article>
           <article className="feed__wrapper--body--content">
-            <p>{feed.content}</p>
+            <p>{content}</p>
           </article>
         </section>
       </article>
