@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import {
@@ -19,10 +19,24 @@ import {
 } from "../../components/home";
 
 const HomeLayout = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const isScrolled = window.scrollY > 280;
+    setScrolled(isScrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="home-layout">
       <Layout>
-        <Header>
+        <Header scrolled={scrolled}>
           <BrandLogo />
           <TopNav />
         </Header>
