@@ -29,6 +29,8 @@ body {
   &:hover {
     cursor: pointer;
     background-color: darken($color: $dark, $amount: 5);
+    color: $red;
+    text-decoration: line-through;
   }
 }
 
@@ -38,6 +40,8 @@ body {
   color: $ligth !important;
   padding: 0 15px !important;
   &:hover {
+    color: $red !important;
+    text-decoration: line-through;
     background-color: darken($color: $green, $amount: 5) !important;
   }
 }

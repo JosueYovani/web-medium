@@ -14,6 +14,8 @@
       margin: 0 26px 8px 0;
 
       &:hover {
+        color: $red;
+        text-decoration: line-through;
         cursor: pointer;
       }
     }
