@@ -1,0 +1,17 @@
+.mini-brand-logo {
+  display: flex;
+  align-items: center;
+  img {
+    height: 30px;
+    width: auto;
+    margin-top: 5px;
+  }
+
+  span {
+    margin-left: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $gray;
+  }
+}
