@@ -9,7 +9,7 @@ export const AuthNav = () => {
       <div className="auth-nav__wrapper">
         <ul className="auth-nav__wrapper--menu">
           <Link to="/new-history">
-            <li>
+            <li className="active">
               <img src={iconWrite} alt="icon write" />
               <span>Write</span>
             </li>

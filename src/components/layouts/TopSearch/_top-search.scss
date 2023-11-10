@@ -16,11 +16,17 @@
 
   &--input {
     input {
-      border: 0;
-      background-color: transparent;
       padding: 12px 25px 12px 0;
       font-weight: 400;
       font-size: 0.83rem;
+      border: 0;
+      background-color: transparent;
+
+      &:disabled,
+      &:focus {
+        color: $gray;
+        outline: none;
+      }
     }
   }
 }

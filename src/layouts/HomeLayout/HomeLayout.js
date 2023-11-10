@@ -38,7 +38,7 @@ const HomeLayout = () => {
       <Layout>
         <Header scrolled={scrolled}>
           <BrandLogo />
-          <TopNav />
+          <TopNav scrolled={scrolled} />
         </Header>
         <Main>
           <StayCurious />

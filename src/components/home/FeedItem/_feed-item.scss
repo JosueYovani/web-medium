@@ -74,8 +74,13 @@
     }
 
     &--cover {
+      background-image: url("https://img.freepik.com/vector-premium/vector-icono-imagen-predeterminado-pagina-imagen-faltante-diseno-sitio-web-o-aplicacion-movil-no-hay-foto-disponible_87543-11093.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       width: 200px;
       height: 134px;
+
       img {
         width: 100%;
         height: 100%;
