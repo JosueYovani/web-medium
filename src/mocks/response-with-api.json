@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "654e4e434eb28de724db2a7e",
+    "title": "First Post",
+    "author": {
+      "_id": "654e4e434eb28de724db2a7c",
+      "name": "John Doe",
+      "email": "john@doe.com",
+      "__v": 0
+    },
+    "content": "This is the first post.",
+    "tags": ["new", "tech"],
+    "createdAt": "2023-11-10T15:37:39.712Z",
+    "__v": 0,
+    "comments": 1
+  },
+  {
+    "_id": "654e4e434eb28de724db2a7f",
+    "title": "Second Post",
+    "author": {
+      "_id": "654e4e434eb28de724db2a7d",
+      "name": "Jane Doe",
+      "email": "jane@doe.com",
+      "__v": 0
+    },
+    "content": "This is the second post.",
+    "tags": ["old", "tech"],
+    "createdAt": "2023-11-10T15:37:39.712Z",
+    "__v": 0,
+    "comments": 1
+  }
+]
