@@ -1,0 +1,39 @@
+.not-results {
+  background-color: rgb(252, 249, 249);
+
+  padding: 40px 20px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--cover {
+      width: 40%;
+      height: auto;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    &--message {
+      color: $red;
+      text-align: center;
+
+      h2 {
+        font-family: "source-serif-pro";
+        font-size: 2rem;
+        font-weight: 500;
+        color: $gray;
+      }
+
+      p {
+        margin-top: 8px;
+        font-weight: 600;
+      }
+    }
+  }
+}
