@@ -1,0 +1,27 @@
+.publish-nav {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    &--menu {
+      list-style: none;
+      display: flex;
+      li {
+        margin-right: 16px;
+      }
+    }
+
+    &--avatar {
+      border-radius: 50%;
+      border: 1px solid rgb(242, 242, 242);
+      background-image: url("https://miro.medium.com/v2/resize:fill:32:32/1*dmbNkD5D-u45r44go_cf0g.png"); /* Puedes cambiar esto a tu color preferido o dejarlo gris */
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}

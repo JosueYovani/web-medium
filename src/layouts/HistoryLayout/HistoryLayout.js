@@ -7,6 +7,7 @@ import {
   Layout,
   Main,
   MiniBrandLogo,
+  PublishNav,
 } from "../../components/layouts";
 
 const HistoryLayout = () => {
@@ -15,6 +16,7 @@ const HistoryLayout = () => {
       <Layout>
         <Header>
           <MiniBrandLogo />
+          <PublishNav />
         </Header>
         <Content>
           <Outlet />
