@@ -37,10 +37,19 @@
 
         .avatar {
           display: flex;
+          background-image: url("https://miro.medium.com/v2/resize:fill:32:32/1*dmbNkD5D-u45r44go_cf0g.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          border: 1px solid rgb(242, 242, 242);
+          border-radius: 50%;
+          height: 44px;
+          width: 44px;
 
           img {
-            height: 44px;
-            width: 44px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 50%;
           }
 

@@ -12,3 +12,18 @@ export function parsedResponseAllPostsApi(data) {
 
   return { posts: mappedData };
 }
+
+export function parsedResponseOnePostApi(data) {
+  const newObjectData = {
+    id: data._id,
+    title: data.title,
+    date_feed: data.createdAt,
+    author: {
+      name: data.author.name,
+    },
+    content: data.content,
+    comments: data.comments, // falta traerlo en la consulta
+  };
+
+  return { post: newObjectData };
+}
