@@ -3,6 +3,7 @@ import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
 import iconBook from "../../../assets/images/icons/icon-book.png";
 import { Link } from "react-router-dom";
+import { parseDateMd } from "../../../helpers/paredDate";
 
 export const FeedItem = ({ feed }) => {
   const {
@@ -23,12 +24,15 @@ export const FeedItem = ({ feed }) => {
       <div className="feed-item__wrapper">
         <div className="feed-item__wrapper--data">
           <div className="creator">
-            <img
-              src={published?.category ? published.img_brand : author.avatar}
-              alt={author.name}
-            />
+            <div className="avatar">
+              {published?.category ? (
+                <img src={published.img_brand} alt={published.category} />
+              ) : (
+                author.avatar && <img src={author.avatar} alt={author.name} />
+              )}
+            </div>
             <p>{author.name}</p>
-            {author.books.length > 0 && <img src={iconBook} alt="icon" />}
+            {author.books?.length > 0 && <img src={iconBook} alt="icon" />}
             <p>{published?.category && `in ${published.category}`}</p>
           </div>
           <div className="story">
@@ -39,7 +43,10 @@ export const FeedItem = ({ feed }) => {
           </div>
           <div className="summary">
             <div className="summary-info">
-              <p className="date">{`${date_feed} | ${time_read} min read`}</p>
+              <p className="date">
+                {parseDateMd(date_feed)}
+                {time_read && ` | ${time_read} min read`}
+              </p>
               {topics.length > 0 && <span className="topic">{topics[0]}</span>}
               {member_story && <img src={iconStar} alt="member" />}
             </div>
@@ -49,7 +56,7 @@ export const FeedItem = ({ feed }) => {
           </div>
         </div>
         <div className="feed-item__wrapper--cover">
-          <img src={img_cover} alt={title} />
+          {img_cover && <img src={img_cover} alt={title} />}
         </div>
       </div>
     </div>
