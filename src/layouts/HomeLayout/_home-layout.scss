@@ -1,6 +1,7 @@
 .home-layout {
   .layout {
     .header {
+      background-color: $bg-ligth;
       border-bottom: 1px solid $dark;
       display: flex;
       height: 75px;
@@ -14,7 +15,7 @@
         background-color: $bg-primary;
       }
       &.bg-secondary {
-        background-color: $bg-secondary;
+        background-color: $bg-scroller;
       }
 
       &__wrapper {

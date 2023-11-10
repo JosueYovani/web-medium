@@ -1,9 +1,30 @@
 .top-nav {
   span {
+    color: lighten($color: $dark, $amount: 20);
     margin-right: 20px;
     font-size: 0.85rem;
-    & :hover {
+    &:hover {
+      color: $red;
+      text-decoration: line-through;
       cursor: pointer;
     }
+  }
+
+  .active {
+    color: lighten($color: $dark, $amount: 5);
+    font-weight: 600;
+    &:hover {
+      cursor: pointer;
+      text-decoration: none !important;
+      color: darken($color: $dark, $amount: 5);
+    }
+  }
+
+  .btn-secondary {
+    border: 0 !important;
+    padding: 10px 16px !important;
+    border-radius: 15px !important;
+    font-weight: 600 !important;
+    cursor: pointer;
   }
 }
