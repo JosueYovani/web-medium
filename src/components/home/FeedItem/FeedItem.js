@@ -49,7 +49,7 @@ export const FeedItem = ({ feed }) => {
           </div>
         </div>
         <div className="feed-item__wrapper--cover">
-          <img src={img_cover} alt="" />
+          <img src={img_cover} alt={title} />
         </div>
       </div>
     </div>
