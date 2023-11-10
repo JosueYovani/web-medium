@@ -1,8 +1,8 @@
 import React from "react";
-import { Feed } from "../../components/feed";
+import { FeedMedium } from "../../components/feed";
 
 const PageFeed = () => {
-  return <Feed />;
+  return <FeedMedium />;
 };
 
 export default PageFeed;

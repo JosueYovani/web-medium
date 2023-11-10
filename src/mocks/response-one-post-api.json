@@ -1,0 +1,14 @@
+{
+  "_id": "654e9c51d22bc01813d3b86b",
+  "title": "Second Post",
+  "author": {
+    "_id": "654e9c51d22bc01813d3b869",
+    "name": "Jane Doe",
+    "email": "jane@doe.com",
+    "__v": 0
+  },
+  "content": "This is the second post.",
+  "tags": ["old", "tech"],
+  "createdAt": "2023-11-10T21:10:41.311Z",
+  "__v": 0
+}
