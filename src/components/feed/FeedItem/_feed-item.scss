@@ -1,4 +1,4 @@
-.feed {
+.feed-item {
   &__wrapper {
     margin: 0 24px;
     &--head {
@@ -136,36 +136,31 @@
 
         .publish {
           display: flex;
-
+          gap: 12px;
           &--group {
             display: flex;
             align-items: center;
             button {
               border: 0;
               background-color: transparent;
-              margin-right: 2px;
             }
             span {
+              padding-left: 2px;
               color: $gray;
               font-size: 0.8rem;
             }
           }
         }
         .share {
+          display: flex;
+          gap: 16px;
           button {
             border: 0;
             background-color: transparent;
-          }
-        }
-
-        .space {
-          margin-right: 24px;
-        }
-
-        .delete {
-          margin-right: 22px;
-          :hover {
-            cursor: pointer;
+            &:hover {
+              color: $red;
+              cursor: pointer;
+            }
           }
         }
       }

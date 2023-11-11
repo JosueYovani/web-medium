@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
 import iconBook from "../../../assets/images/icons/icon-book.png";
-import { Link } from "react-router-dom";
+
 import { parseDateMd } from "../../../helpers/paredDate";
 
 export const FeedItem = ({ feed }) => {
@@ -19,7 +21,6 @@ export const FeedItem = ({ feed }) => {
     member_story,
   } = feed;
 
-  console.log(feed);
   return (
     <div className="feed-item">
       <div className="feed-item__wrapper">

@@ -19,7 +19,6 @@ const FeedLayout = () => {
             <BrandLogo />
             <TopSearch />
           </section>
-
           <AuthNav />
         </Header>
         <Content>

@@ -13,7 +13,7 @@ import iconClap from "../../../assets/images/icons/icon-clap.png";
 import iconComment from "../../../assets/images/icons/icon-comment.png";
 import iconDelete from "../../../assets/images/icons/trash-fill.svg";
 
-export const Feed = ({ feed }) => {
+export const FeedItem = ({ feed }) => {
   const {
     member_story,
     title,
@@ -40,17 +40,17 @@ export const Feed = ({ feed }) => {
   };
 
   return (
-    <section className="feed">
+    <section className="feed-item">
       <article className="feed__wrapper">
-        <section className="feed__wrapper--head">
+        <section className="feed-item__wrapper--head">
           {member_story && (
             <div className="member-only">
               <img src={iconStar} alt="member" /> <span>Member-only story</span>
             </div>
           )}
-          <h1 className="feed__wrapper--head-title">{title}</h1>
+          <h1 className="feed-item__wrapper--head-title">{title}</h1>
           {member_story && <p>{description}</p>}
-          <article className="feed__wrapper--head-creator">
+          <article className="feed-item__wrapper--head-creator">
             <div className="avatar">
               {author.avatar && <img src={author?.avatar} alt={author?.name} />}
               {published?.category && (
@@ -87,7 +87,7 @@ export const Feed = ({ feed }) => {
               </div>
             </div>
           </article>
-          <article className="feed__wrapper--head-actions">
+          <article className="feed-item__wrapper--head-actions">
             <div className="publish">
               <div className="publish--group space">
                 <button>
@@ -104,13 +104,13 @@ export const Feed = ({ feed }) => {
               </div>
             </div>
             <div className="share">
-              <button className="delete" onClick={handleDeleteFeed}>
+              <button onClick={handleDeleteFeed}>
                 <img src={iconDelete} alt="icon delete" />
               </button>
-              <button className="space">
+              <button>
                 <img src={iconSave} alt="icon save" />
               </button>
-              <button className="space">
+              <button>
                 <img src={iconListen} alt="icon listen" />
               </button>
               <button>
@@ -119,11 +119,11 @@ export const Feed = ({ feed }) => {
             </div>
           </article>
         </section>
-        <section className="feed__wrapper--body">
-          <article className="feed__wrapper--body--cover">
+        <section className="feed-item__wrapper--body">
+          <article className="feed-item__wrapper--body--cover">
             {img_cover && <img src={img_cover} alt={title} />}
           </article>
-          <article className="feed__wrapper--body--content">
+          <article className="feed-item__wrapper--body--content">
             <p>{content}</p>
           </article>
         </section>

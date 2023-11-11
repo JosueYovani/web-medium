@@ -50,4 +50,9 @@ body {
   background-color: $bg-ligth;
   border: 1px solid $ligth;
   border-radius: 15px;
+  padding: 3px 8px !important;
+
+  &:hover {
+    cursor: default;
+  }
 }
