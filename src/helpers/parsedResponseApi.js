@@ -22,7 +22,7 @@ export function parsedResponseOnePostApi(data) {
       name: data.author?.name,
     },
     content: data.content,
-    comments: data.comments, // falta traerlo en la consulta
+    // comments: data.comments,
   };
 
   return { post: newObjectData };

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { topics } from "../../../mocks/data-topics";
+import { DiscoverTopicItem } from "../DiscoverTopicItem/DiscoverTopicItem";
 
 export const DiscoverTopics = () => {
   return (
@@ -8,9 +9,7 @@ export const DiscoverTopics = () => {
       <h2>Discover more of what matters to you</h2>
       <article className="discover_topics__wrapper">
         {topics?.map((topic, index) => (
-          <span key={index} className="topic">
-            {topic}
-          </span>
+          <DiscoverTopicItem key={index} topic={topic} />
         ))}
       </article>
       <button>See more topics</button>

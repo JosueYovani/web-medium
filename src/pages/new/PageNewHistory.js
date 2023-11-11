@@ -1,8 +1,8 @@
 import React from "react";
-import { FormNewFeed } from "../../components/feed";
+import { CreateNewHistory } from "../../components/new";
 
 const PageNewHistory = () => {
-  return <FormNewFeed />;
+  return <CreateNewHistory />;
 };
 
 export default PageNewHistory;

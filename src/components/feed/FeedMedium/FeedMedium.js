@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { NotResults } from "../../common";
+import { FeedItem } from "../FeedItem/FeedItem";
 
-import { Feed } from "../Feed/Feed";
 import { getFeedByIdWithAPi } from "../../../services/getFeedByIdWithAPi";
 
 export const FeedMedium = () => {
@@ -24,7 +24,7 @@ export const FeedMedium = () => {
 
   return (
     <section className="feed-medium">
-      {feed ? <Feed feed={feed} /> : <NotResults />}
+      {feed ? <FeedItem feed={feed} /> : <NotResults />}
     </section>
   );
 };

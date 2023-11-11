@@ -1,9 +1,6 @@
-.form-new-feed {
-  display: flex;
-  align-items: center;
-
+.create-new-form {
+  width: 100%;
   form {
-    width: 100%;
     .form-group {
       margin-bottom: 5px;
       input,
@@ -22,10 +19,17 @@
         &::placeholder {
           color: $txt-form;
         }
+
+        &:disabled,
+        &:focus {
+          outline: none;
+        }
       }
 
       .title {
-        font-size: 2.1rem;
+        font-size: 2.7rem;
+        line-height: 1.4;
+        font-weight: 400;
       }
 
       span {
@@ -33,19 +37,6 @@
         font-size: 12px;
         display: block;
         margin-top: 5px;
-      }
-    }
-
-    button {
-      background-color: $green;
-      color: $ligth;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 15px;
-      font-size: 0.79rem;
-      width: 100%;
-      &:hover {
-        cursor: pointer;
       }
     }
   }

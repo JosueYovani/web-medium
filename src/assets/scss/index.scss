@@ -1,16 +1,12 @@
 @import "./variables";
 @import "./custom";
 
-@import "../../layouts/FeedLayout/feed-layout";
-@import "../../layouts/HistoryLayout/history-layout";
-@import "../../layouts/HomeLayout/home-layout";
-
 @import "../../components/common/NotResults/not-results";
 
-@import "../../components/feed/Feed/feed";
+@import "../../components/feed/FeedItem/feed-item";
 @import "../../components/feed/FeedMedium/feed-medium";
-@import "../../components/feed/FormNewFeed/form-new-feed";
 
+@import "../../components/home/DiscoverTopicItem/discover-topic-item";
 @import "../../components/home/DiscoverTopics/discover_topics";
 @import "../../components/home/FeedItem/feed-item";
 @import "../../components/home/FeedsMedium/feeds-medium";
@@ -27,3 +23,10 @@
 @import "../../components/layouts/PublishNav/publish-nav";
 @import "../../components/layouts/TopNav/top-nav";
 @import "../../components/layouts/TopSearch/top-search";
+
+@import "../../components/new/CreateNewForm/create-new-form";
+@import "../../components/new/CreateNewHistory/create-new-history";
+
+@import "../../layouts/FeedLayout/feed-layout";
+@import "../../layouts/HistoryLayout/history-layout";
+@import "../../layouts/HomeLayout/home-layout";
