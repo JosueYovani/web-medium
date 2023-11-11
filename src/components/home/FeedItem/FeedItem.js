@@ -19,6 +19,7 @@ export const FeedItem = ({ feed }) => {
     member_story,
   } = feed;
 
+  console.log(feed);
   return (
     <div className="feed-item">
       <div className="feed-item__wrapper">
@@ -28,11 +29,13 @@ export const FeedItem = ({ feed }) => {
               {published?.category ? (
                 <img src={published.img_brand} alt={published.category} />
               ) : (
-                author.avatar && <img src={author.avatar} alt={author.name} />
+                author?.avatar && (
+                  <img src={author?.avatar} alt={author?.name} />
+                )
               )}
             </div>
-            <p>{author.name}</p>
-            {author.books?.length > 0 && <img src={iconBook} alt="icon" />}
+            <p>{author?.name}</p>
+            {author?.books?.length > 0 && <img src={iconBook} alt="icon" />}
             <p>{published?.category && `in ${published.category}`}</p>
           </div>
           <div className="story">

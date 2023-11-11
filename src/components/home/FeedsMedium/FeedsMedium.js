@@ -22,6 +22,8 @@ export const FeedsMedium = () => {
     fetchData();
   }, []);
 
+  console.log(feeds);
+
   return (
     <section className="feeds-medium">
       {feeds ? <FeedsMediumList feeds={feeds} /> : <NotResults />}
