@@ -1,5 +1,5 @@
-import URL_API from "../../config/constants";
-import { parsedResponseOnePostApi } from "../../helpers/parsedResponseApi";
+import URL_API from "../config/constants";
+import { parsedResponseOnePostApi } from "../helpers/parsedResponseApi";
 
 export const getFeedByIdWithAPi = async (postId) => {
   try {

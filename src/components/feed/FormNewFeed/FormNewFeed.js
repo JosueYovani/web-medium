@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { topics } from "../../../mocks/data-topics";
-import { postFeedWithAPi } from "../../services/postFeedWithAPi";
+import { postFeedWithAPi } from "../../../services/postFeedWithAPi";
 
 export const FormNewFeed = () => {
   const [newFeed, setNewFeed] = useState({
@@ -108,7 +108,6 @@ export const FormNewFeed = () => {
             onChange={handleChange}
             placeholder="Image"
           />
-
           <span>.</span>
         </div>
         <button type="submit">Publicar</button>

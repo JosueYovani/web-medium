@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { NotResults } from "../../common";
-import { getFeedByIdWithAPi } from "../../services/getFeedByIdWithAPi";
+
 import { Feed } from "../Feed/Feed";
+import { getFeedByIdWithAPi } from "../../../services/getFeedByIdWithAPi";
 
 export const FeedMedium = () => {
   const { id } = useParams();

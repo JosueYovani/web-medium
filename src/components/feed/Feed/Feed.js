@@ -1,4 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
+import { parseDateDAgo } from "../../../helpers/paredDate";
+import { deleteFeedByIdWithApi } from "../../../services/deleteFeedByIdWithApi";
 
 import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
@@ -7,7 +11,7 @@ import iconListen from "../../../assets/images/icons/icon-listen.png";
 import iconShare from "../../../assets/images/icons/icon-share.png";
 import iconClap from "../../../assets/images/icons/icon-clap.png";
 import iconComment from "../../../assets/images/icons/icon-comment.png";
-import { parseDateDAgo } from "../../../helpers/paredDate";
+import iconDelete from "../../../assets/images/icons/trash-fill.svg";
 
 export const Feed = ({ feed }) => {
   const {
@@ -23,8 +27,17 @@ export const Feed = ({ feed }) => {
     img_cover,
     content,
   } = feed;
+  const navigate = useNavigate();
 
-  console.log(feed);
+  const handleDeleteFeed = async () => {
+    try {
+      await deleteFeedByIdWithApi(feed.id);
+      console.log("Feed eliminado exitosamente");
+      navigate("/");
+    } catch (error) {
+      console.error("Error al eliminar el feed:", error.message);
+    }
+  };
 
   return (
     <section className="feed">
@@ -91,6 +104,9 @@ export const Feed = ({ feed }) => {
               </div>
             </div>
             <div className="share">
+              <button className="delete" onClick={handleDeleteFeed}>
+                <img src={iconDelete} alt="icon delete" />
+              </button>
               <button className="space">
                 <img src={iconSave} alt="icon save" />
               </button>
