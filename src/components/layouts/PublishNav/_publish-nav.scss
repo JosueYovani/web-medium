@@ -2,12 +2,27 @@
   &__wrapper {
     display: flex;
     align-items: center;
+    gap: 16px;
+    button {
+      background-color: $green;
+      color: $ligth;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 15px;
+      font-size: 0.75rem;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        color: darken($color: $ligth, $amount: 5);
+      }
+    }
 
     &--menu {
       list-style: none;
       display: flex;
       li {
-        margin-right: 16px;
+        margin: 0 6px;
       }
     }
 
@@ -20,7 +35,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: 10px;
+
       cursor: pointer;
     }
   }
