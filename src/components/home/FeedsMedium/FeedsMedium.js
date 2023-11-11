@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { FeedsMediumList } from "../FeedsMediumList";
-import { getFeedsWithAPi } from "../../services/getFeedsWithAPi";
+import { getFeedsWithAPi } from "../../../services/getFeedsWithAPi";
 import { NotResults } from "../../common";
 
 // import feeds from "../../../mocks/data-feeds";

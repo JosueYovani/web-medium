@@ -161,6 +161,13 @@
         .space {
           margin-right: 24px;
         }
+
+        .delete {
+          margin-right: 22px;
+          :hover {
+            cursor: pointer;
+          }
+        }
       }
     }
 

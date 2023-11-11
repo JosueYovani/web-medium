@@ -1,4 +1,4 @@
-import URL_API from "../../config/constants";
+import URL_API from "../config/constants";
 
 export const postFeedWithAPi = async (newFeed) => {
   try {
