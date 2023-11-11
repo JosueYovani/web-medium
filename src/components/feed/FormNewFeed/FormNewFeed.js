@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { topics } from "../../../mocks/data-topics";
+import { postFeedWithAPi } from "../../services/postFeedWithAPi";
 
 export const FormNewFeed = () => {
   const [newFeed, setNewFeed] = useState({
@@ -18,9 +19,20 @@ export const FormNewFeed = () => {
     setNewFeed({ ...newFeed, [name]: value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Nuevo Feed:", newFeed);
+    try {
+      const data = {
+        title: newFeed.title,
+        author: "654e9c51d22bc01813d3b869",
+        content: newFeed.content,
+        tags: newFeed.topics,
+      };
+      await postFeedWithAPi(data);
+      console.log("Nuevo Feed enviado exitosamente");
+    } catch (error) {
+      console.error("Error al enviar el nuevo Feed:", error);
+    }
   };
 
   return (
