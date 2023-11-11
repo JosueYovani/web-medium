@@ -5,7 +5,7 @@ export function parsedResponseAllPostsApi(data) {
     description: item.content,
     date_feed: item.createdAt,
     author: {
-      name: item.author.name,
+      name: item.author?.name,
     },
     topics: item.tags,
   }));
@@ -19,7 +19,7 @@ export function parsedResponseOnePostApi(data) {
     title: data.title,
     date_feed: data.createdAt,
     author: {
-      name: data.author.name,
+      name: data.author?.name,
     },
     content: data.content,
     comments: data.comments, // falta traerlo en la consulta
