@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { deleteFeedByIdWithApi } from "../../../services/deleteFeedByIdWithApi";
@@ -7,6 +7,7 @@ import { parseDateDAgo } from "../../../helpers/paredDate";
 import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconBook from "../../../assets/images/icons/icon-book.png";
 import iconShare from "../../../assets/images/icons/icon-share.png";
+import iconClaps from "../../../assets/images/icons/icon-clap.png";
 import iconComment from "../../../assets/images/icons/icon-comment.png";
 import iconDelete from "../../../assets/images/icons/trash-fill.svg";
 
@@ -19,13 +20,14 @@ export const FeedItem = ({ feed, openModal }) => {
     author,
     time_read,
     date_feed,
-    claps,
     comments,
     img_cover,
     content,
   } = feed;
 
   const navigate = useNavigate();
+
+  const [claps, setClaps] = useState(0);
 
   const handleDeleteFeed = async () => {
     try {
@@ -35,6 +37,10 @@ export const FeedItem = ({ feed, openModal }) => {
     } catch (error) {
       console.error("Error al eliminar el feed:", error.message);
     }
+  };
+
+  const handleIncrementClap = () => {
+    setClaps(claps + 1);
   };
 
   return (
@@ -87,6 +93,12 @@ export const FeedItem = ({ feed, openModal }) => {
           </article>
           <article className="feed-item__wrapper--head-actions">
             <div className="publish">
+              <div className="publish--group">
+                <button onClick={handleIncrementClap}>
+                  <img src={iconClaps} alt="icon claps" />
+                </button>
+                <span>{claps ? claps : "do you like it?"}</span>
+              </div>
               <div className="publish--group">
                 <button onClick={() => openModal()}>
                   <img src={iconComment} alt="icon comment" />
