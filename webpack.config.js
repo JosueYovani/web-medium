@@ -42,4 +42,8 @@ module.exports = {
     port: 3000,
     historyApiFallback: true,
   },
+
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
 };

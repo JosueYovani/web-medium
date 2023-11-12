@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { parseDateDAgo } from "../../../helpers/paredDate";
@@ -12,6 +12,7 @@ import iconShare from "../../../assets/images/icons/icon-share.png";
 import iconClap from "../../../assets/images/icons/icon-clap.png";
 import iconComment from "../../../assets/images/icons/icon-comment.png";
 import iconDelete from "../../../assets/images/icons/trash-fill.svg";
+import { ModalAside } from "../../common";
 
 export const FeedItem = ({ feed }) => {
   const {
@@ -27,7 +28,17 @@ export const FeedItem = ({ feed }) => {
     img_cover,
     content,
   } = feed;
+
   const navigate = useNavigate();
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const handleDeleteFeed = async () => {
     try {
@@ -38,6 +49,8 @@ export const FeedItem = ({ feed }) => {
       console.error("Error al eliminar el feed:", error.message);
     }
   };
+
+  console.log(isModalOpen);
 
   return (
     <section className="feed-item">
@@ -97,7 +110,7 @@ export const FeedItem = ({ feed }) => {
               </div>
 
               <div className="publish--group">
-                <button>
+                <button onClick={() => openModal()}>
                   <img src={iconComment} alt="icon clap" />
                 </button>
                 <span>{comments ? comments : 99}</span>
@@ -128,6 +141,13 @@ export const FeedItem = ({ feed }) => {
           </article>
         </section>
       </article>
+      <ModalAside
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        title={`Responses (${comments ? comments : 0})`}
+      >
+        <h1>Hola Comments</h1>
+      </ModalAside>
     </section>
   );
 };

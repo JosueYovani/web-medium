@@ -143,6 +143,9 @@
             button {
               border: 0;
               background-color: transparent;
+              &:hover {
+                cursor: pointer;
+              }
             }
             span {
               padding-left: 2px;
