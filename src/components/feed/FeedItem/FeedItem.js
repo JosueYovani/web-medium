@@ -1,21 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import { parseDateDAgo } from "../../../helpers/paredDate";
 import { deleteFeedByIdWithApi } from "../../../services/deleteFeedByIdWithApi";
+import { parseDateDAgo } from "../../../helpers/paredDate";
 
 import iconStar from "../../../assets/images/icons/icon-star.png";
-import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
 import iconBook from "../../../assets/images/icons/icon-book.png";
-import iconListen from "../../../assets/images/icons/icon-listen.png";
 import iconShare from "../../../assets/images/icons/icon-share.png";
-import iconClap from "../../../assets/images/icons/icon-clap.png";
 import iconComment from "../../../assets/images/icons/icon-comment.png";
 import iconDelete from "../../../assets/images/icons/trash-fill.svg";
-import { ModalAside } from "../../common";
-import { CommentList } from "../CommentList/CommentList";
 
-export const FeedItem = ({ feed }) => {
+export const FeedItem = ({ feed, openModal }) => {
   const {
     member_story,
     title,
@@ -31,15 +26,6 @@ export const FeedItem = ({ feed }) => {
   } = feed;
 
   const navigate = useNavigate();
-  const [isModalOpen, setModalOpen] = useState(true);
-
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
 
   const handleDeleteFeed = async () => {
     try {
@@ -128,13 +114,6 @@ export const FeedItem = ({ feed }) => {
           </article>
         </section>
       </article>
-      <ModalAside
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        title={`Responses (${comments ? comments : 0})`}
-      >
-        <CommentList />
-      </ModalAside>
     </section>
   );
 };
