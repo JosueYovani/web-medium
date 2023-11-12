@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { parseDateDAgo } from "../../../helpers/paredDate";
 import { deleteFeedByIdWithApi } from "../../../services/deleteFeedByIdWithApi";
 
-import commentsPost from "../../../mocks/response-comments-post.json";
-
 import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
 import iconBook from "../../../assets/images/icons/icon-book.png";
@@ -15,7 +13,7 @@ import iconClap from "../../../assets/images/icons/icon-clap.png";
 import iconComment from "../../../assets/images/icons/icon-comment.png";
 import iconDelete from "../../../assets/images/icons/trash-fill.svg";
 import { ModalAside } from "../../common";
-import { CommentItem } from "../CommentItem/CommentItem";
+import { CommentList } from "../CommentList/CommentList";
 
 export const FeedItem = ({ feed }) => {
   const {
@@ -33,7 +31,7 @@ export const FeedItem = ({ feed }) => {
   } = feed;
 
   const navigate = useNavigate();
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(true);
 
   const openModal = () => {
     setModalOpen(true);
@@ -135,9 +133,7 @@ export const FeedItem = ({ feed }) => {
         onClose={closeModal}
         title={`Responses (${comments ? comments : 0})`}
       >
-        {commentsPost.map((comment) => {
-          return <CommentItem key={comment._id} comment={comment} />;
-        })}
+        <CommentList />
       </ModalAside>
     </section>
   );
