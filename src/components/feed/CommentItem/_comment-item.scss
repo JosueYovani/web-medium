@@ -1,0 +1,68 @@
+.comment-item {
+  padding: 25px 0 16px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &--creator {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .author {
+        display: flex;
+        align-items: center;
+
+        &-avatar {
+          border-radius: 50%;
+          border: 1px solid rgb(242, 242, 242);
+          background-image: url("https://miro.medium.com/v2/resize:fill:32:32/1*dmbNkD5D-u45r44go_cf0g.png"); /* Puedes cambiar esto a tu color preferido o dejarlo gris */
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          cursor: pointer;
+        }
+
+        &-info {
+          display: flex;
+          flex-direction: column;
+          padding-left: 12px;
+          &-name {
+            font-size: 0.87rem;
+            font-weight: 400;
+            line-height: 20px;
+          }
+
+          &-date {
+            color: lighten($color: $gray, $amount: 20);
+            font-size: 0.85rem;
+            font-weight: 400;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .icon {
+        height: 41px;
+        padding: 1px 6px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+
+    &--comment {
+      word-break: break-word;
+      font-size: 0.87rem;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 5px 0;
+    }
+  }
+}

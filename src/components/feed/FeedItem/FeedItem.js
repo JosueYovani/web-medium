@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { parseDateDAgo } from "../../../helpers/paredDate";
 import { deleteFeedByIdWithApi } from "../../../services/deleteFeedByIdWithApi";
 
+import commentsPost from "../../../mocks/response-comments-post.json";
+
 import iconStar from "../../../assets/images/icons/icon-star.png";
 import iconSave from "../../../assets/images/icons/icon-plus-feed.png";
 import iconBook from "../../../assets/images/icons/icon-book.png";
@@ -13,6 +15,7 @@ import iconClap from "../../../assets/images/icons/icon-clap.png";
 import iconComment from "../../../assets/images/icons/icon-comment.png";
 import iconDelete from "../../../assets/images/icons/trash-fill.svg";
 import { ModalAside } from "../../common";
+import { CommentItem } from "../CommentItem/CommentItem";
 
 export const FeedItem = ({ feed }) => {
   const {
@@ -49,8 +52,6 @@ export const FeedItem = ({ feed }) => {
       console.error("Error al eliminar el feed:", error.message);
     }
   };
-
-  console.log(isModalOpen);
 
   return (
     <section className="feed-item">
@@ -102,16 +103,9 @@ export const FeedItem = ({ feed }) => {
           </article>
           <article className="feed-item__wrapper--head-actions">
             <div className="publish">
-              <div className="publish--group space">
-                <button>
-                  <img src={iconClap} alt="icon clap" />
-                </button>
-                <span>{claps ? claps : 2.4}K</span>
-              </div>
-
               <div className="publish--group">
                 <button onClick={() => openModal()}>
-                  <img src={iconComment} alt="icon clap" />
+                  <img src={iconComment} alt="icon comment" />
                 </button>
                 <span>{comments ? comments : 99}</span>
               </div>
@@ -120,12 +114,7 @@ export const FeedItem = ({ feed }) => {
               <button onClick={handleDeleteFeed}>
                 <img src={iconDelete} alt="icon delete" />
               </button>
-              <button>
-                <img src={iconSave} alt="icon save" />
-              </button>
-              <button>
-                <img src={iconListen} alt="icon listen" />
-              </button>
+
               <button>
                 <img src={iconShare} alt="icon share" />
               </button>
@@ -146,7 +135,9 @@ export const FeedItem = ({ feed }) => {
         onClose={closeModal}
         title={`Responses (${comments ? comments : 0})`}
       >
-        <h1>Hola Comments</h1>
+        {commentsPost.map((comment) => {
+          return <CommentItem key={comment._id} comment={comment} />;
+        })}
       </ModalAside>
     </section>
   );
