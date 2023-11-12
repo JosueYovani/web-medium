@@ -1,0 +1,15 @@
+[
+  {
+    "_id": "65504c5d5d9b90f02ee53b90",
+    "postId": "65504c5c5d9b90f02ee53b85",
+    "author": {
+      "_id": "65504c5c5d9b90f02ee53b82",
+      "name": "John Doe",
+      "email": "john@doe.com",
+      "__v": 0
+    },
+    "content": "This is the second comment.",
+    "createdAt": "2023-11-12T03:54:04.295Z",
+    "__v": 0
+  }
+]
