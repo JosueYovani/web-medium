@@ -1,0 +1,25 @@
+.comment-list {
+  &__wrapper {
+    .comments-select {
+      align-items: center;
+
+      display: flex;
+      height: 34px;
+      padding: 0 12px;
+
+      h3 {
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+
+      select {
+        margin-left: 8px;
+        border: none;
+        background-color: transparent;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
