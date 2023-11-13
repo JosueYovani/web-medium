@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 import { ModalAside } from "../../common";
 import { FeedItem } from "../FeedItem/FeedItem";
-import { CommentList } from "../CommentList/CommentList";
+
+import { ContainerComments } from "../ContainerComments/ContainerComments";
 
 export const ContainerMedium = ({ feed }) => {
   const [numberComments, setNumberComments] = useState([]);
@@ -25,7 +26,10 @@ export const ContainerMedium = ({ feed }) => {
         onClose={closeModal}
         title={`Responses (${numberComments ? numberComments : 0})`}
       >
-        <CommentList postId={feed.id} setNumberComments={setNumberComments} />
+        <ContainerComments
+          postId={feed.id}
+          setNumberComments={setNumberComments}
+        />
       </ModalAside>
     </React.Fragment>
   );

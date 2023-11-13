@@ -1,25 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { CommentItem } from "../CommentItem/CommentItem";
-import { getCommentsByIdWithApi } from "../../../services/getCommentsByIdWithApi";
 
-export const CommentList = ({ postId, setNumberComments }) => {
-  const [comments, setComments] = useState([]);
-
-  useEffect(() => {
-    const fetchCommentsByPostId = async () => {
-      try {
-        const comments = await getCommentsByIdWithApi(postId);
-        setComments(comments);
-        setNumberComments(comments?.length);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchCommentsByPostId();
-  }, [comments]);
-
+export const CommentList = ({ comments }) => {
   if (!comments || comments.length === 0)
     return (
       <div className="no-response">
