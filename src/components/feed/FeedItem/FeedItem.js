@@ -103,7 +103,7 @@ export const FeedItem = ({ feed, openModal }) => {
                 <button onClick={() => openModal()}>
                   <img src={iconComment} alt="icon comment" />
                 </button>
-                <span>{comments ? comments : 99}</span>
+                <span>{comments ? comments : "what do you think?"}</span>
               </div>
             </div>
             <div className="share">

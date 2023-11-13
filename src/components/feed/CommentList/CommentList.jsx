@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-import commentsPost from "../../../mocks/response-comments-post.json";
 import { CommentItem } from "../CommentItem/CommentItem";
 
-export const CommentList = ({ setComments }) => {
-  useEffect(() => {
-    setComments(commentsPost.length);
-  }, [commentsPost]);
+export const CommentList = ({ comments }) => {
+  if (!comments || comments.length === 0)
+    return (
+      <div className="no-response">
+        There are currently no responses for this story. Be the first to
+        respond.
+      </div>
+    );
 
   return (
     <section className="comment-list">
@@ -15,8 +18,8 @@ export const CommentList = ({ setComments }) => {
           <h3>MOST RECENT</h3>
           <select name="" id=""></select>
         </div>
-        <div className="comments-list">
-          {commentsPost.map((comment) => {
+        <div className="comments-body">
+          {comments?.map((comment) => {
             return <CommentItem key={comment._id} comment={comment} />;
           })}
         </div>
