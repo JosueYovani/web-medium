@@ -16,8 +16,6 @@ export const FeedMediumContent = ({ feed }) => {
     setModalOpen(false);
   };
 
-  console.log(feed);
-
   const feedWithNumerComments = { ...feed, comments: numberComments };
 
   return (

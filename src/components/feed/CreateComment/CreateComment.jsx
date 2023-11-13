@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
 
+import { postCommentByPostIdWithApi } from "../../../services/postCommentByPostIdWithApi";
 import iconBold from "../../../assets/images/icons/icon-bold.png";
 
 export const CreateComment = ({ postId }) => {
+  const txtContentRef = useRef(null);
+
+  const handleSubmitNewComment = async (event) => {
+    event.preventDefault();
+    try {
+      if (txtContentRef.current) {
+        const data = {
+          author: "654e9c51d22bc01813d3b869",
+          content: txtContentRef.current.value,
+        };
+        await postCommentByPostIdWithApi(postId, data);
+        console.log("Nuevo comentario enviado exitosamente");
+        txtContentRef.current.value = "";
+      }
+    } catch (error) {
+      console.error("Error al enviar el nuevo Feed:", error);
+    }
+  };
+
   return (
     <section className="create-comment">
       <div className="create-comment__wrapper">
@@ -12,10 +32,9 @@ export const CreateComment = ({ postId }) => {
             <span>Gio</span>
           </div>
           <div className="container-form">
-            <form action="">
+            <form onSubmit={handleSubmitNewComment}>
               <textarea
-                name=""
-                id=""
+                ref={txtContentRef}
                 rows="4"
                 placeholder="What are your thoughts?"
               ></textarea>
@@ -27,7 +46,9 @@ export const CreateComment = ({ postId }) => {
                 </div>
                 <div className="form-controls-buttons">
                   <span>Cancel</span>
-                  <button className="btn-secondary">Respond</button>
+                  <button type="submit" className="btn-secondary">
+                    Respond
+                  </button>
                 </div>
               </div>
             </form>
