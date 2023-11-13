@@ -1,0 +1,122 @@
+.create-comment {
+  margin-bottom: 24px;
+  &__wrapper {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
+    padding: 0 24px;
+    margin-bottom: 10px;
+
+    .container {
+      padding: 14px 0;
+
+      &-creator {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        &--avatar {
+          border-radius: 50%;
+          border: 1px solid rgb(242, 242, 242);
+          background-image: url("https://miro.medium.com/v2/resize:fill:32:32/1*dmbNkD5D-u45r44go_cf0g.png"); /* Puedes cambiar esto a tu color preferido o dejarlo gris */
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            border: 1px solid $red;
+            cursor: pointer;
+          }
+        }
+
+        span {
+          color: $dark;
+          font-size: 0.81rem;
+          font-weight: 400;
+          line-height: 16px;
+          padding-left: 8px;
+        }
+      }
+
+      &-form {
+        form {
+          textarea {
+            color: $txt-form;
+            width: 100%;
+            border: 0;
+            font-family: Georgia, Times, serif;
+            &::placeholder {
+              color: $txt-form;
+            }
+
+            &:disabled,
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+        .form-controls {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 16px;
+
+          button {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background: none;
+            font: inherit;
+            color: inherit;
+            line-height: normal;
+            cursor: pointer;
+          }
+
+          &-decorations {
+            button {
+              img {
+                height: 18px;
+              }
+            }
+          }
+
+          &-buttons {
+            font-size: 0.8rem;
+
+            span {
+              margin-right: 8px;
+              cursor: pointer;
+
+              &:hover {
+                color: darken($color: $dark, $amount: 5);
+              }
+            }
+
+            .btn-secondary {
+              margin-left: 8px;
+              padding: 8px 15px !important;
+
+              &:hover {
+                text-decoration: none !important;
+                color: $ligth !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .check {
+    display: flex;
+    align-items: center;
+
+    input {
+      border: 0;
+    }
+    span {
+      margin-left: 8px;
+      font-size: 0.85rem;
+      color: $gray;
+    }
+  }
+}

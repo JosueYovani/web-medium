@@ -4,6 +4,7 @@ import { ModalAside } from "../../common";
 import { FeedItem } from "../FeedItem/FeedItem";
 
 import { ContainerComments } from "../ContainerComments/ContainerComments";
+import { CreateComment } from "../CreateComment/CreateComment";
 
 export const ContainerMedium = ({ feed }) => {
   const [numberComments, setNumberComments] = useState([]);
@@ -16,6 +17,8 @@ export const ContainerMedium = ({ feed }) => {
     setModalOpen(false);
   };
 
+  console.log(feed);
+
   const feedWithNumerComments = { ...feed, comments: numberComments };
 
   return (
@@ -26,6 +29,7 @@ export const ContainerMedium = ({ feed }) => {
         onClose={closeModal}
         title={`Responses (${numberComments ? numberComments : 0})`}
       >
+        <CreateComment postId={feed.id} />
         <ContainerComments
           postId={feed.id}
           setNumberComments={setNumberComments}
