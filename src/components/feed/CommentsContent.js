@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-import { getCommentsByIdWithApi } from "../../../services/getCommentsByIdWithApi";
-import { NotResponseMsg } from "../../common";
-import { CommentList } from "../CommentList/CommentList";
+import { getCommentsByIdWithApi } from "../../services/getCommentsByIdWithApi";
+import { NotResponseMsg } from "../common";
+import { CommentList } from "./CommentList/CommentList";
 
-export const ContainerComments = ({ postId, setNumberComments }) => {
+export const CommentsContent = ({ postId, setNumberComments }) => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {

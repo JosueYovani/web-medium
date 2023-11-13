@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
-import { ModalAside } from "../../common";
-import { FeedItem } from "../FeedItem/FeedItem";
+import { ModalAside } from "../common";
+import { FeedView } from "./FeedView/FeedView";
+import { CommentsContent } from "./CommentsContent";
+import { CreateComment } from "./CreateComment/CreateComment";
 
-import { ContainerComments } from "../ContainerComments/ContainerComments";
-import { CreateComment } from "../CreateComment/CreateComment";
-
-export const ContainerMedium = ({ feed }) => {
+export const FeedMediumContent = ({ feed }) => {
   const [numberComments, setNumberComments] = useState([]);
   const [isModalOpen, setModalOpen] = useState(true);
 
@@ -23,14 +22,14 @@ export const ContainerMedium = ({ feed }) => {
 
   return (
     <React.Fragment>
-      <FeedItem feed={feedWithNumerComments} openModal={openModal} />
+      <FeedView feed={feedWithNumerComments} openModal={openModal} />
       <ModalAside
         isOpen={isModalOpen}
         onClose={closeModal}
         title={`Responses (${numberComments ? numberComments : 0})`}
       >
         <CreateComment postId={feed.id} />
-        <ContainerComments
+        <CommentsContent
           postId={feed.id}
           setNumberComments={setNumberComments}
         />
