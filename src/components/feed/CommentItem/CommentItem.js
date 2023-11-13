@@ -12,10 +12,14 @@ export const CommentItem = ({ comment }) => {
         <section className="comment-item__wrapper--creator">
           <article className="author">
             <div className="author-avatar">
-              {author?.avatar && <img src={author?.avatar} alt={author.name} />}
+              {author?.avatar && (
+                <img src={author?.avatar} alt={author?.name} />
+              )}
             </div>
             <div className="author-info">
-              <span className="author-info-name">{author.name}</span>
+              <span className="author-info-name">
+                {author ? author.name : "Gio"}
+              </span>
               <span className="author-info-date">{`about ${parseDateDAgo(
                 createdAt
               )}`}</span>
