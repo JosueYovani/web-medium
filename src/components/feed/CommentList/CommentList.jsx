@@ -1,12 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-import commentsPost from "../../../mocks/response-comments-post.json";
 import { CommentItem } from "../CommentItem/CommentItem";
+import { getCommentsByIdWithApi } from "../../../services/getCommentsByIdWithApi";
 
-export const CommentList = ({ setComments }) => {
+export const CommentList = ({ postId, setNumberComments }) => {
+  const [comments, setComments] = useState([]);
+
   useEffect(() => {
-    setComments(commentsPost.length);
-  }, [commentsPost]);
+    const fetchCommentsByPostId = async () => {
+      try {
+        const comments = await getCommentsByIdWithApi(postId);
+        setComments(comments);
+        setNumberComments(comments?.length);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchCommentsByPostId();
+  }, [comments]);
+
+  if (!comments || comments.length === 0)
+    return (
+      <div className="no-response">
+        There are currently no responses for this story. Be the first to
+        respond.
+      </div>
+    );
 
   return (
     <section className="comment-list">
@@ -15,8 +35,8 @@ export const CommentList = ({ setComments }) => {
           <h3>MOST RECENT</h3>
           <select name="" id=""></select>
         </div>
-        <div className="comments-list">
-          {commentsPost.map((comment) => {
+        <div className="comments-body">
+          {comments?.map((comment) => {
             return <CommentItem key={comment._id} comment={comment} />;
           })}
         </div>
