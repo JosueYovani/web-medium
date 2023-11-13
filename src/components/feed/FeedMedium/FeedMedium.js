@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { ContainerMedium } from "../ContainerMedium/ContainerMedium";
 import { NotResults } from "../../common";
+import { FeedMediumContent } from "../FeedMediumContent";
 import { getFeedByIdWithAPi } from "../../../services/getFeedByIdWithAPi";
 
 export const FeedMedium = () => {
@@ -23,7 +23,7 @@ export const FeedMedium = () => {
 
   return (
     <section className="feed-medium">
-      {feed ? <ContainerMedium feed={feed} /> : <NotResults />}
+      {feed ? <FeedMediumContent feed={feed} /> : <NotResults />}
     </section>
   );
 };

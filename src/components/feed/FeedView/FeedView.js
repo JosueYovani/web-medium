@@ -11,7 +11,7 @@ import iconClaps from "../../../assets/images/icons/icon-clap.png";
 import iconComment from "../../../assets/images/icons/icon-comment.png";
 import iconDelete from "../../../assets/images/icons/trash-fill.svg";
 
-export const FeedItem = ({ feed, openModal }) => {
+export const FeedView = ({ feed, openModal }) => {
   const {
     member_story,
     title,
@@ -44,17 +44,17 @@ export const FeedItem = ({ feed, openModal }) => {
   };
 
   return (
-    <section className="feed-item">
+    <section className="feed-view">
       <article className="feed__wrapper">
-        <section className="feed-item__wrapper--head">
+        <section className="feed-view__wrapper--head">
           {member_story && (
             <div className="member-only">
               <img src={iconStar} alt="member" /> <span>Member-only story</span>
             </div>
           )}
-          <h1 className="feed-item__wrapper--head-title">{title}</h1>
+          <h1 className="feed-view__wrapper--head-title">{title}</h1>
           {member_story && <p>{description}</p>}
-          <article className="feed-item__wrapper--head-creator">
+          <article className="feed-view__wrapper--head-creator">
             <div className="avatar">
               {author.avatar && <img src={author?.avatar} alt={author?.name} />}
               {published?.category && (
@@ -91,7 +91,7 @@ export const FeedItem = ({ feed, openModal }) => {
               </div>
             </div>
           </article>
-          <article className="feed-item__wrapper--head-actions">
+          <article className="feed-view__wrapper--head-actions">
             <div className="publish">
               <div className="publish--group">
                 <button onClick={handleIncrementClap}>
@@ -117,11 +117,11 @@ export const FeedItem = ({ feed, openModal }) => {
             </div>
           </article>
         </section>
-        <section className="feed-item__wrapper--body">
-          <article className="feed-item__wrapper--body--cover">
+        <section className="feed-view__wrapper--body">
+          <article className="feed-view__wrapper--body--cover">
             {img_cover && <img src={img_cover} alt={title} />}
           </article>
-          <article className="feed-item__wrapper--body--content">
+          <article className="feed-view__wrapper--body--content">
             <p>{content}</p>
           </article>
         </section>
